@@ -8,19 +8,12 @@
   --font-mono: var(--font-geist-mono), monospace;
 }
 
-:root {
-  color-scheme: light dark;
-}
-
-html.dark {
+:root, html {
   color-scheme: dark;
-}
-
-html:not(.dark) {
-  color-scheme: light;
 }
 
 body {
   font-family: var(--font-sans);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  background-color: #000;
+  color: #fff;
 }

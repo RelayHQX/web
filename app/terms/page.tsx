@@ -7,8 +7,8 @@ export const metadata = {
 
 const Terms = () => {
   return (
-    <main className="fixed inset-0 w-full h-full overflow-hidden bg-[#fafafc] dark:bg-black">
-      {/* Floating navigation dock with Home back button and Theme toggle side-by-side */}
+    <main className="fixed inset-0 w-full h-full overflow-hidden bg-black">
+      {/* Floating navigation with Home back button */}
       <Navbar />
 
       {/* Full screen Notion iframe with sandbox to block top-window reload loops */}

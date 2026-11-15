@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,20 +26,6 @@ export const metadata: Metadata = {
   },
 };
 
-const themeScript = `
-(function() {
-  try {
-    var stored = localStorage.getItem('relay-theme');
-    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (stored === 'dark' || ((!stored || stored === 'system') && prefersDark)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  } catch (e) {}
-})();
-`;
-
 export default function RootLayout({
   children,
 }: {
@@ -49,17 +34,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased dark`}
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
-      <body
-        suppressHydrationWarning
-        className="min-h-full flex flex-col bg-[#fafafc] text-neutral-900 dark:bg-black dark:text-white selection:bg-neutral-900/10 dark:selection:bg-white/20 selection:text-neutral-900 dark:selection:text-white transition-colors duration-200"
-      >
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="min-h-full flex flex-col bg-black text-white selection:bg-white/20 selection:text-white">
+        {children}
       </body>
     </html>
   );

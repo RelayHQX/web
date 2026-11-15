@@ -1,6 +1,5 @@
 import { RelayLogo } from "@/components/relay-logo";
 import { LinkCard, type LinkItem } from "@/components/link-card";
-import { Navbar } from "@/components/navbar";
 
 import {
   Github01Icon,
@@ -36,22 +35,20 @@ const links: LinkItem[] = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full flex flex-col items-center justify-center p-6 bg-[#fafafc] text-neutral-900 dark:bg-black dark:text-white selection:bg-neutral-900/10 dark:selection:bg-white/20 selection:text-neutral-900 dark:selection:text-white transition-colors duration-200 relative">
-      <Navbar isHome />
-
+    <main className="min-h-screen w-full flex flex-col items-center justify-center p-6 bg-black text-white selection:bg-white/20 selection:text-white relative">
       <div className="flex items-center mb-2">
-        <RelayLogo className="h-6 w-auto text-neutral-950 dark:text-white transition-colors" />
-        <h1 className="text-3xl font-semibold tracking-tight text-neutral-950 dark:text-white">
+        <RelayLogo className="h-6 w-auto text-white" />
+        <h1 className="text-3xl font-semibold tracking-tight text-white">
           elay Mail
         </h1>
       </div>
 
-      <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-8 font-normal">
+      <p className="text-sm text-neutral-400 mb-8 font-normal">
         RelayHQ
       </p>
 
-      <div className="w-full max-w-sm sm:max-w-2xl rounded-2xl bg-black/5 dark:bg-white/10 backdrop-blur-xl overflow-hidden shadow-lg dark:shadow-2xl transition-colors">
-        <div className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-black/5 dark:divide-white/10">
+      <div className="w-full max-w-sm sm:max-w-2xl rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 overflow-hidden shadow-2xl">
+        <div className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-white/10">
           {links.map((link) => (
             <LinkCard key={link.title} item={link} />
           ))}

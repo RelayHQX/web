@@ -25,22 +25,22 @@ export function LinkCard({ item }: LinkCardProps) {
       href={item.href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className="flex items-center justify-between px-4 py-3.5 hover:bg-black/5 dark:hover:bg-white/10 transition-colors group w-full sm:flex-col sm:justify-between sm:p-4 sm:h-26 sm:flex-1 sm:min-w-33.75"
+      className="flex items-center justify-between px-4 py-3.5 hover:bg-white/10 transition-colors group w-full sm:flex-col sm:justify-between sm:p-4 sm:h-26 sm:flex-1 sm:min-w-33.75"
     >
       {/* Mobile: icon + title row. Desktop: icon + arrow top row */}
       <div className="flex items-center gap-3 min-w-0 sm:w-full sm:justify-between">
         <HugeiconsIcon
           icon={item.icon}
           size={18}
-          className="text-neutral-900 dark:text-white shrink-0 sm:w-5 sm:h-5"
+          className="text-white shrink-0 sm:w-5 sm:h-5"
         />
-        <span className="text-sm font-medium text-neutral-900 dark:text-white truncate sm:hidden">
+        <span className="text-sm font-medium text-white truncate sm:hidden">
           {item.title}
         </span>
         <HugeiconsIcon
           icon={TrailingIcon}
           size={16}
-          className="hidden sm:block text-neutral-400 group-hover:text-neutral-900 dark:text-white/40 dark:group-hover:text-white transition-colors shrink-0"
+          className="hidden sm:block text-white/40 group-hover:text-white transition-colors shrink-0"
         />
       </div>
 
@@ -48,11 +48,11 @@ export function LinkCard({ item }: LinkCardProps) {
       <HugeiconsIcon
         icon={TrailingIcon}
         size={16}
-        className="sm:hidden text-neutral-400 group-hover:text-neutral-900 dark:text-white/40 dark:group-hover:text-white transition-colors shrink-0"
+        className="sm:hidden text-white/40 group-hover:text-white transition-colors shrink-0"
       />
 
       {/* Desktop: title placed at bottom */}
-      <span className="hidden sm:block text-sm font-medium text-neutral-900 dark:text-white leading-snug w-full">
+      <span className="hidden sm:block text-sm font-medium text-white leading-snug w-full">
         {item.title}
       </span>
     </Link>
