@@ -1,14 +1,62 @@
-"use client"
-import Image from "next/image"
+import { RelayLogo } from "@/components/relay-logo";
+import { LinkCard, type LinkItem } from "@/components/link-card";
+import { Navbar } from "@/components/navbar";
 
-const Main = () => {
+import {
+  Github01Icon,
+  PolicyIcon,
+  News01Icon,
+  Agreement03Icon,
+} from "@hugeicons/core-free-icons";
+
+const links: LinkItem[] = [
+  {
+    title: "Blogs",
+    href: "https://blogs.relaymail.online",
+    icon: News01Icon,
+    isExternal: true,
+  },
+  {
+    title: "Privacy Policy",
+    href: "/privacy",
+    icon: PolicyIcon,
+  },
+  {
+    title: "Terms & Condition",
+    href: "/terms",
+    icon: Agreement03Icon,
+  },
+  {
+    title: "GitHub",
+    href: "https://github.com/relayhqx",
+    icon: Github01Icon,
+    isExternal: true,
+  },
+];
+
+export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <Image src="/relay-hq.png" alt="relay hq logo" width={100} height={100} className="rounded-3xl mb-2" />
-      <h1 className="text-4xl font-bold mb-2">Relay HQ</h1>
-      <h1 className="text-xl font-semibold text-gray-500">Under Construction</h1>
-    </div>
-  )
-}
+    <main className="min-h-screen w-full flex flex-col items-center justify-center p-6 bg-[#fafafc] text-neutral-900 dark:bg-black dark:text-white selection:bg-neutral-900/10 dark:selection:bg-white/20 selection:text-neutral-900 dark:selection:text-white transition-colors duration-200 relative">
+      <Navbar isHome />
 
-export default Main
+      <div className="flex items-center mb-2">
+        <RelayLogo className="h-6 w-auto text-neutral-950 dark:text-white transition-colors" />
+        <h1 className="text-3xl font-semibold tracking-tight text-neutral-950 dark:text-white">
+          elay Mail
+        </h1>
+      </div>
+
+      <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-8 font-normal">
+        RelayHQ
+      </p>
+
+      <div className="w-full max-w-sm sm:max-w-2xl rounded-2xl bg-black/5 dark:bg-white/10 backdrop-blur-xl overflow-hidden shadow-lg dark:shadow-2xl transition-colors">
+        <div className="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-black/5 dark:divide-white/10">
+          {links.map((link) => (
+            <LinkCard key={link.title} item={link} />
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+}

@@ -19,7 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@rhq/mdx": ["./packages/mdx/src"],
+      "@rhq/mdx/*": ["./packages/mdx/src/*"]
     }
   },
   "include": [
