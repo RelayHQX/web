@@ -1,0 +1,1403 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Terms of Use</title>
+	<style>
+		/* cspell:disable-file */
+		/* webkit printing magic: print all background colors */
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		@media only screen {
+			body {
+				margin: 2em auto;
+				max-width: 900px;
+				color: rgb(55, 53, 47);
+			}
+		}
+
+		body {
+			line-height: 1.5;
+			white-space: pre-wrap;
+		}
+
+		a,
+		a.visited {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 80%;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		/* Override strong tags inside headings to maintain consistent weight */
+		h1 strong,
+		h2 strong,
+		h3 strong {
+			font-weight: 600;
+		}
+
+		.page-title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 1.875rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+		.source {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 1.5em;
+			word-break: break-all;
+		}
+
+		.callout {
+			border-radius: 10px;
+			padding: 1rem;
+			/* Paint a complete callout box on every PDF page fragment. */
+			-webkit-box-decoration-break: clone;
+			box-decoration-break: clone;
+		}
+
+		/* For default-background callouts, render the border outline. */
+		.callout.block-color-default_background {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		figure {
+			margin: 1.25em 0;
+			page-break-inside: avoid;
+		}
+
+		/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+		details,
+		aside {
+			margin: 1.25em 0;
+		}
+
+		/* Keep a toggle's title on the same page as the start of its content. */
+		summary {
+			page-break-after: avoid;
+			break-after: avoid;
+		}
+
+		/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+		summary h1,
+		summary h2,
+		summary h3,
+		summary h4 {
+			margin-top: 0;
+		}
+
+		figcaption {
+			opacity: 0.5;
+			font-size: 85%;
+			margin-top: 0.5em;
+		}
+
+		mark {
+			background-color: transparent;
+		}
+
+		.indented {
+			padding-left: 1.5em;
+		}
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+
+			table.collection-content {
+				width: 100%;
+				table-layout: fixed;
+			}
+
+			table.collection-content th,
+			table.collection-content td {
+				overflow-wrap: anywhere;
+			}
+
+			table.collection-content td>.user,
+			table.collection-content td>time {
+				white-space: pre-wrap;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content-wrapper {
+			overflow-x: auto;
+		}
+
+		@media only print {
+			.collection-content-wrapper {
+				overflow-x: visible;
+			}
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.collection-content td {
+			white-space: pre-wrap;
+			word-break: break-word;
+		}
+
+		.column-list {
+			display: flex;
+			gap: 46px;
+		}
+
+		.column {
+			min-width: 0;
+			overflow: hidden;
+		}
+
+		.column>*:first-child {
+			margin-top: 0;
+		}
+
+		.table_of_contents-item {
+			display: block;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			padding-inline: 0.125rem;
+			padding-block: 0.375rem;
+		}
+
+		.table_of_contents-indent-1 {
+			margin-left: 1.5rem;
+		}
+
+		.table_of_contents-indent-2 {
+			margin-left: 3rem;
+		}
+
+		.table_of_contents-indent-3 {
+			margin-left: 4.5rem;
+		}
+
+		.table_of_contents-link {
+			text-decoration: none;
+			opacity: 0.7;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		table {
+			border-collapse: collapse;
+			border-left: none;
+			border-right: none;
+		}
+
+		th,
+		td {
+			font-weight: normal;
+			padding: 0.25em 0.5em;
+			line-height: 1.5;
+			min-height: 1.5em;
+			text-align: left;
+		}
+
+		th {
+			color: rgba(55, 53, 47, 0.6);
+		}
+
+		ol,
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+		}
+
+		ul.to-do-list {
+			padding-inline-start: 0;
+		}
+
+		ul.to-do-list>li {
+			list-style: none;
+		}
+
+		.to-do-children-checked {
+			text-decoration: line-through;
+			opacity: 0.375;
+		}
+
+		ul.toggle>li {
+			list-style: none;
+		}
+
+		ul {
+			padding-inline-start: 1.7em;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		ol {
+			padding-inline-start: 1.6em;
+		}
+
+		ol.numbered-list.numbered-list-digits-2 {
+			padding-inline-start: 2em;
+		}
+
+		ol.numbered-list.numbered-list-digits-3plus {
+			padding-inline-start: 2.4em;
+		}
+
+		ol>li {
+			padding-left: 0.2em;
+		}
+
+		.mono ol {
+			padding-inline-start: 2em;
+		}
+
+		.mono ol>li {
+			text-indent: -0.4em;
+		}
+
+		.toggle {
+			padding-inline-start: 0em;
+			list-style-type: none;
+		}
+
+		/* Indent toggle children */
+		.toggle>li>details {
+			padding-left: 1.7em;
+		}
+
+		.toggle>li>details>summary {
+			margin-left: -1.1em;
+		}
+
+		.selected-value {
+			display: inline-block;
+			padding: 0 0.5em;
+			background: rgba(206, 205, 202, 0.5);
+			border-radius: 3px;
+			margin-right: 0.5em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+			white-space: nowrap;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.page-description {
+			margin-bottom: 2em;
+		}
+
+		.simple-table {
+			margin-top: 1em;
+			font-size: 0.875rem;
+			empty-cells: show;
+		}
+
+		.simple-table td {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table th {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table-header-color {
+			background: rgb(247, 246, 243);
+			color: black;
+		}
+
+		.simple-table-header {
+			font-weight: 500;
+		}
+
+		time {
+			opacity: 0.5;
+		}
+
+		.icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 1.2em;
+			max-height: 1.2em;
+			text-decoration: none;
+			vertical-align: text-bottom;
+			margin-right: 0.5em;
+		}
+
+		/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+		.icon[data-emoji]::before {
+			content: attr(data-emoji);
+		}
+
+		img.icon {
+			border-radius: 3px;
+		}
+
+		.callout img.notion-static-icon {
+			width: 1em;
+			height: 1em;
+		}
+
+		.callout p {
+			margin: 0;
+		}
+
+		.callout h1,
+		.callout h2,
+		.callout h3 {
+			margin: 0 0 0.6rem;
+		}
+
+		.user-icon {
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+		}
+
+		.user-icon-inner {
+			font-size: 0.8em;
+		}
+
+		.text-icon {
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		.page-cover-image {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			max-height: 30vh;
+		}
+
+		.page-header-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.page-header-icon-with-cover {
+			margin-top: -0.72em;
+			margin-left: 0.07em;
+		}
+
+		.page-header-icon img {
+			border-radius: 3px;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+
+		p>.user {
+			opacity: 0.5;
+		}
+
+		td>.user,
+		td>time {
+			white-space: nowrap;
+		}
+
+		input[type="checkbox"] {
+			margin-right: 0.4em;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.image {
+			border: none;
+			margin: 1.5em 0;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+		}
+
+		.code,
+		code {
+			background: rgba(135, 131, 120, 0.15);
+			border-radius: 3px;
+			padding: 0.2em 0.4em;
+			border-radius: 3px;
+			font-size: 85%;
+			tab-size: 2;
+		}
+
+		code {
+			color: #eb5757;
+		}
+
+		.code {
+			padding: 1.5em 1em;
+		}
+
+		.code-wrap {
+			white-space: pre-wrap;
+			word-break: break-all;
+		}
+
+		.code>code {
+			background: none;
+			padding: 0;
+			font-size: 100%;
+			color: inherit;
+		}
+
+		blockquote {
+			font-size: 1em;
+			margin: 1em 0;
+			padding-left: 1em;
+			border-left: 3px solid rgb(55, 53, 47);
+		}
+
+		blockquote.quote-large {
+			font-size: 1.25em;
+		}
+
+		.bookmark {
+			text-decoration: none;
+			max-height: 8em;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+
+		.bookmark-title {
+			font-size: 0.85em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.75em;
+			white-space: nowrap;
+		}
+
+		.bookmark-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bookmark-info {
+			flex: 4 1 180px;
+			padding: 12px 14px 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.bookmark-image {
+			width: 33%;
+			flex: 1 1 180px;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			border-radius: 1px;
+		}
+
+		.bookmark-description {
+			color: rgba(55, 53, 47, 0.6);
+			font-size: 0.75em;
+			overflow: hidden;
+			max-height: 4.5em;
+			word-break: break-word;
+		}
+
+		.bookmark-href {
+			font-size: 0.75em;
+			margin-top: 0.25em;
+		}
+
+		.tab {
+			margin: 1.25em 0;
+			padding-inline: 1rem;
+			border: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.code {
+			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+		}
+
+		.serif {
+			font-family: Lyon-Text, Georgia, ui-serif, serif;
+		}
+
+		.mono {
+			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+		}
+
+		.pdf .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+		}
+
+		.pdf .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.pdf .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+		}
+
+		.pdf .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.highlight-default {
+			color: rgba(44, 44, 43, 1);
+		}
+
+		.highlight-gray {
+			color: rgba(125, 122, 117, 1);
+			fill: rgba(125, 122, 117, 1);
+		}
+
+		.highlight-brown {
+			color: rgba(159, 118, 90, 1);
+			fill: rgba(159, 118, 90, 1);
+		}
+
+		.highlight-orange {
+			color: rgba(210, 123, 45, 1);
+			fill: rgba(210, 123, 45, 1);
+		}
+
+		.highlight-yellow {
+			color: rgba(203, 148, 52, 1);
+			fill: rgba(203, 148, 52, 1);
+		}
+
+		.highlight-teal {
+			color: rgba(80, 148, 110, 1);
+			fill: rgba(80, 148, 110, 1);
+		}
+
+		.highlight-blue {
+			color: rgba(56, 125, 201, 1);
+			fill: rgba(56, 125, 201, 1);
+		}
+
+		.highlight-purple {
+			color: rgba(154, 107, 180, 1);
+			fill: rgba(154, 107, 180, 1);
+		}
+
+		.highlight-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.highlight-red {
+			color: rgba(207, 81, 72, 1);
+			fill: rgba(207, 81, 72, 1);
+		}
+
+		.highlight-default_background {
+			color: rgba(44, 44, 43, 1);
+		}
+
+		.highlight-gray_background {
+			background: rgba(42, 28, 0, 0.07);
+		}
+
+		.highlight-brown_background {
+			background: rgba(139, 46, 0, 0.086);
+		}
+
+		.highlight-orange_background {
+			background: rgba(224, 101, 1, 0.129);
+		}
+
+		.highlight-yellow_background {
+			background: rgba(211, 168, 0, 0.137);
+		}
+
+		.highlight-teal_background {
+			background: rgba(0, 100, 45, 0.09);
+		}
+
+		.highlight-blue_background {
+			background: rgba(0, 124, 215, 0.094);
+		}
+
+		.highlight-purple_background {
+			background: rgba(102, 0, 178, 0.078);
+		}
+
+		.highlight-pink_background {
+			background: rgba(197, 0, 93, 0.086);
+		}
+
+		.highlight-red_background {
+			background: rgba(223, 22, 0, 0.094);
+		}
+
+		.block-color-default {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray {
+			color: rgba(125, 122, 117, 1);
+			fill: rgba(125, 122, 117, 1);
+		}
+
+		.block-color-brown {
+			color: rgba(159, 118, 90, 1);
+			fill: rgba(159, 118, 90, 1);
+		}
+
+		.block-color-orange {
+			color: rgba(210, 123, 45, 1);
+			fill: rgba(210, 123, 45, 1);
+		}
+
+		.block-color-yellow {
+			color: rgba(203, 148, 52, 1);
+			fill: rgba(203, 148, 52, 1);
+		}
+
+		.block-color-teal {
+			color: rgba(80, 148, 110, 1);
+			fill: rgba(80, 148, 110, 1);
+		}
+
+		.block-color-blue {
+			color: rgba(56, 125, 201, 1);
+			fill: rgba(56, 125, 201, 1);
+		}
+
+		.block-color-purple {
+			color: rgba(154, 107, 180, 1);
+			fill: rgba(154, 107, 180, 1);
+		}
+
+		.block-color-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.block-color-red {
+			color: rgba(207, 81, 72, 1);
+			fill: rgba(207, 81, 72, 1);
+		}
+
+		.block-color-default_background {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray_background {
+			background: rgba(240, 239, 237, 1);
+		}
+
+		.block-color-brown_background {
+			background: rgba(245, 237, 233, 1);
+		}
+
+		.block-color-orange_background {
+			background: rgba(251, 235, 222, 1);
+		}
+
+		.block-color-yellow_background {
+			background: rgba(249, 243, 220, 1);
+		}
+
+		.block-color-teal_background {
+			background: rgba(232, 241, 236, 1);
+		}
+
+		.block-color-blue_background {
+			background: rgba(229, 242, 252, 1);
+		}
+
+		.block-color-purple_background {
+			background: rgba(243, 235, 249, 1);
+		}
+
+		.block-color-pink_background {
+			background: rgba(250, 233, 241, 1);
+		}
+
+		.block-color-red_background {
+			background: rgba(252, 233, 231, 1);
+		}
+
+		.select-value-color-default {
+			background-color: rgba(42, 28, 0, 0.07);
+		}
+
+		.select-value-color-gray {
+			background-color: rgba(28, 19, 1, 0.11);
+		}
+
+		.select-value-color-brown {
+			background-color: rgba(127, 51, 0, 0.156);
+		}
+
+		.select-value-color-orange {
+			background-color: rgba(196, 88, 0, 0.203);
+		}
+
+		.select-value-color-yellow {
+			background-color: rgba(209, 156, 0, 0.282);
+		}
+
+		.select-value-color-green {
+			background-color: rgba(0, 96, 38, 0.156);
+		}
+
+		.select-value-color-blue {
+			background-color: rgba(0, 118, 217, 0.203);
+		}
+
+		.select-value-color-purple {
+			background-color: rgba(92, 0, 163, 0.141);
+		}
+
+		.select-value-color-pink {
+			background-color: rgba(183, 0, 78, 0.152);
+		}
+
+		.select-value-color-red {
+			background-color: rgba(206, 24, 0, 0.164);
+		}
+
+		.checkbox {
+			display: inline-flex;
+			vertical-align: text-bottom;
+			width: 16;
+			height: 16;
+			background-size: 16px;
+			margin-left: 2px;
+			margin-right: 5px;
+		}
+
+		.checkbox-on {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.checkbox-off {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+	
+html, body {
+  background-color: #000000 !important;
+  color: #d4d4d4 !important;
+  color-scheme: dark !important;
+}
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+    color: #d4d4d4 !important;
+    background-color: #000000 !important;
+    padding: 0 1.5rem;
+  }
+}
+h1, h2, h3, strong {
+  color: #ffffff !important;
+}
+h1.page-title {
+  color: #ffffff !important;
+}
+a, a.visited {
+  color: #ffffff !important;
+}
+hr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.simple-table {
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.simple-table th, .simple-table td {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #d4d4d4 !important;
+}
+.simple-table-header {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+.page-header-icon img.icon {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+</style>
+	<style>
+		@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')
+	</style>
+</head>
+
+<body>
+	<article id="418ece28-b75d-8053-9548-e01199241568" class="page sans"
+		data-notion-page-icon="https://s3-us-west-2.amazonaws.com/public.notion-static.com/9de3954e-6d34-41e6-a6dd-191fc7577622/agreement-03-stroke-rounded.svg">
+		<header>
+			<div class="page-header-icon undefined"><img class="icon"
+					src="agreement-03-stroke-rounded.svg" /></div>
+			<h1 class="page-title" dir="auto">Terms of Use</h1>
+			<p class="page-description" dir="auto"></p>
+		</header>
+		<div class="page-body">
+			<p id="419ece28-b75d-8037-b675-d3f49fc599c0" class="" dir="auto"><strong>Effective Date:</strong> 14
+				November 2026</p>
+			<p id="419ece28-b75d-80f4-aa54-c508b10aae95" class="" dir="auto"><strong>Last Updated:</strong> 14 November
+				2026</p>
+			<p id="419ece28-b75d-805f-bf87-ea1b5d1a92a2" class="" dir="auto"><strong>Version:</strong> 1.0</p>
+			<hr id="419ece28-b75d-80cb-a4c4-fc8d81e97ae0" dir="auto" />
+			<h2 id="419ece28-b75d-80a4-8b4b-d24dfb410c95" class="" dir="auto">1. Introduction</h2>
+			<p id="419ece28-b75d-80ad-9722-f4f170292460" class="" dir="auto">Welcome to <strong>RelayHQ</strong>.</p>
+			<p id="419ece28-b75d-8069-af3e-f40aab0d9021" class="" dir="auto">These Terms of Use (&quot;Terms&quot;)
+				govern your access to and use of RelayHQ applications, websites, software, APIs, and related services
+				(&quot;Services&quot;).</p>
+			<p id="419ece28-b75d-803f-bef2-ff13db155111" class="" dir="auto">RelayHQ develops technology products with a
+				focus on privacy, reliability, and user control.</p>
+			<p id="419ece28-b75d-80eb-85af-d9e2089cdc84" class="" dir="auto">By accessing or using our Services, you
+				agree to these Terms. If you disagree, please discontinue using the relevant Service.</p>
+			<h2 id="419ece28-b75d-80da-b5d0-e0c4a3aea7b0" class="" dir="auto">2. About RelayHQ</h2>
+			<table id="419ece28-b75d-80e3-9e65-e6cd557f71d3" class="simple-table" dir="ltr">
+				<thead class="simple-table-header">
+					<tr id="419ece28-b75d-800c-9b11-c308bc414a55" dir="ltr">
+						<th id="Wx[z" class="simple-table-header-color simple-table-header">Detail</th>
+						<th id="e\AP" class="simple-table-header-color simple-table-header">Information</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="419ece28-b75d-8029-ab8a-d3799e2247a0" dir="ltr">
+						<td id="Wx[z" class="">Organisation</td>
+						<td id="e\AP" class="">RelayHQ</td>
+					</tr>
+					<tr id="419ece28-b75d-80de-b83d-e0809a131a7f" dir="ltr">
+						<td id="Wx[z" class="">Registered Address</td>
+						<td id="e\AP" class="">Kolkata, West Bengal, India</td>
+					</tr>
+					<tr id="419ece28-b75d-80b3-b567-c5c449396dd9" dir="ltr">
+						<td id="Wx[z" class="">Official Website</td>
+						<td id="e\AP" class=""><a href="https://app.relaymail.online/">https://app.relaymail.online</a>
+						</td>
+					</tr>
+					<tr id="419ece28-b75d-807e-82a1-ffa0720ee06d" dir="ltr">
+						<td id="Wx[z" class="">Legal Contact</td>
+						<td id="e\AP" class=""><a href="mailto:sohamglxi@gmail.com">sohamglxi@gmail.com</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 id="419ece28-b75d-80c0-a0a7-f2d96f8dba1d" class="" dir="auto">Definitions</h3>
+			<p id="419ece28-b75d-80fc-97a6-d706ad0f4fbf" class="" dir="auto">For the purposes of these Terms:</p>
+			<ul id="419ece28-b75d-80ce-a3c6-fe0718d7929e" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>User:</strong> Anyone accessing or using our Services.</li>
+			</ul>
+			<ul id="419ece28-b75d-800b-8444-d000ad62f96b" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>Account:</strong> Your registered RelayHQ account.</li>
+			</ul>
+			<ul id="419ece28-b75d-801a-8804-c227b1172316" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>Services:</strong> Applications, websites, APIs, and software
+					operated by RelayHQ.</li>
+			</ul>
+			<ul id="419ece28-b75d-8035-aa9b-dc4cd916eeac" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>User Content:</strong> Information or materials you submit
+					through our Services.</li>
+			</ul>
+			<ul id="419ece28-b75d-803f-ba85-fbfa42196d5c" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>Third-Party Services:</strong> External platforms and services
+					integrated with RelayHQ.</li>
+			</ul>
+			<h2 id="419ece28-b75d-8045-98cf-c1c0031fd699" class="" dir="auto">3. Eligibility and Accounts</h2>
+			<p id="419ece28-b75d-80d5-a824-f8c9e8c786bd" class="" dir="auto">You must be legally capable of accepting
+				these Terms and meet the applicable age requirements to use our Services.</p>
+			<p id="419ece28-b75d-803b-9ea1-da23b749d872" class="" dir="auto">Some features require account registration
+				or authentication.</p>
+			<p id="419ece28-b75d-80f6-bdee-cb5a1ba17e85" class="" dir="auto">You are responsible for:</p>
+			<ul id="419ece28-b75d-809b-9b8c-fce390f85227" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Providing accurate account information.</li>
+			</ul>
+			<ul id="419ece28-b75d-802f-9a2e-cc59e7ed62d3" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Maintaining account security.</li>
+			</ul>
+			<ul id="419ece28-b75d-808a-b659-fd56fcf731ad" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Protecting your authentication credentials.</li>
+			</ul>
+			<ul id="419ece28-b75d-807c-8280-cd6a48b8bae7" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Reporting suspected unauthorised access.</li>
+			</ul>
+			<p id="419ece28-b75d-803c-94cf-ee03e6967544" class="" dir="auto">RelayHQ may restrict access to accounts
+				involved in misuse, fraud, or security violations.</p>
+			<h2 id="419ece28-b75d-8002-83aa-eb82dc6181ff" class="" dir="auto">4. Licence and Intellectual Property</h2>
+			<p id="419ece28-b75d-8006-9480-fd69b484d83f" class="" dir="auto">RelayHQ grants you a limited,
+				non-exclusive, non-transferable, and revocable licence to use its Services for their intended purposes.
+			</p>
+			<p id="419ece28-b75d-80cd-a744-f15b3f7b16fc" class="" dir="auto">You may not:</p>
+			<ul id="419ece28-b75d-8013-87eb-ea7a75b150f2" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Copy, redistribute, or commercially exploit proprietary software
+					without permission.</li>
+			</ul>
+			<ul id="419ece28-b75d-8029-aaa2-e14428ca5f57" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Reverse engineer or attempt to obtain proprietary source code, except
+					where permitted by law.</li>
+			</ul>
+			<ul id="419ece28-b75d-8036-b912-de4dca4a5d79" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Circumvent security measures or access restrictions.</li>
+			</ul>
+			<ul id="419ece28-b75d-8012-bf53-f05d0ead7514" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Remove copyright, trademark, or proprietary notices.</li>
+			</ul>
+			<p id="419ece28-b75d-801d-9976-ee5816e0fb3c" class="" dir="auto">All intellectual property rights in
+				RelayHQ&#x27;s software, branding, logos, designs, and proprietary technology belong to RelayHQ or their
+				respective rights holders.</p>
+			<p id="419ece28-b75d-80bb-8c6f-d7905936e25b" class="" dir="auto">Open-source components remain subject to
+				their individual licences.</p>
+			<h2 id="419ece28-b75d-807a-9a1c-c9e155875e6c" class="" dir="auto">5. Acceptable Use</h2>
+			<p id="419ece28-b75d-8079-a1e9-e91c1db638f6" class="" dir="auto">You agree not to use RelayHQ Services to:
+			</p>
+			<ol type="1" id="419ece28-b75d-804b-8f4d-c008ed759fe2" class="numbered-list" start="1" dir="auto">
+				<li>Conduct unlawful, fraudulent, or deceptive activities.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80ab-bc4b-e648b1394e7e" class="numbered-list" start="2" dir="auto">
+				<li>Distribute malware, spam, or phishing communications.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80d3-94dd-ca2d83ce5d9f" class="numbered-list" start="3" dir="auto">
+				<li>Access accounts or systems without authorisation.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-8034-adcc-d16664f197a3" class="numbered-list" start="4" dir="auto">
+				<li>Interfere with service availability, security, or infrastructure.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80b6-86ee-e5c8d6f6bc96" class="numbered-list" start="5" dir="auto">
+				<li>Exploit vulnerabilities without appropriate authorisation.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-8063-ba41-e1d0a66e5920" class="numbered-list" start="6" dir="auto">
+				<li>Impersonate individuals or organisations.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-8032-a593-e0d1945ff025" class="numbered-list" start="7" dir="auto">
+				<li>Violate another person&#x27;s privacy or intellectual property rights.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-808b-8fc7-e9408cb96f0f" class="numbered-list" start="8" dir="auto">
+				<li>Abuse APIs, automated systems, or usage limits.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80f3-964d-ea9d77a5a46a" class="numbered-list" start="9" dir="auto">
+				<li>Violate third-party provider policies.</li>
+			</ol>
+			<p id="419ece28-b75d-80c2-9433-d9f7e7c573a1" class="" dir="auto">We may investigate suspected violations and
+				take appropriate action.</p>
+			<h2 id="419ece28-b75d-803e-af72-d520b07e7d15" class="" dir="auto">6. User Content and Ownership</h2>
+			<p id="419ece28-b75d-80c0-96db-f3806c347ec6" class="" dir="auto">You retain ownership of content you create,
+				submit, or transmit through RelayHQ, to the extent that you hold the relevant rights.</p>
+			<p id="419ece28-b75d-807f-ae40-f37964b3f024" class="" dir="auto">RelayHQ does not claim ownership of your
+				personal content.</p>
+			<p id="419ece28-b75d-80e1-aae0-edb3e11f8662" class="" dir="auto">You grant RelayHQ a limited licence to
+				process, transmit, or display your content only as necessary to:</p>
+			<ul id="419ece28-b75d-8098-8ec7-e02c417d30fc" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Provide requested functionality.</li>
+			</ul>
+			<ul id="419ece28-b75d-80a9-9e20-d4f74d53743e" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Maintain and secure the Services.</li>
+			</ul>
+			<ul id="419ece28-b75d-80a6-97f7-c16637a7c2dc" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Meet applicable legal obligations.</li>
+			</ul>
+			<p id="419ece28-b75d-8019-afd1-f184b5e4644d" class="" dir="auto">You are responsible for ensuring that you
+				have the necessary rights to submit or share your content.</p>
+			<h2 id="419ece28-b75d-8070-93e9-ef38b02c5b2f" class="" dir="auto">7. Relay Mail and Email Providers</h2>
+			<p id="419ece28-b75d-800d-ba83-da560059ecfd" class="" dir="auto"><strong>Relay Mail is an email-client
+					application, not an email hosting provider.</strong></p>
+			<p id="419ece28-b75d-80f8-982c-c40b69545b57" class="" dir="auto">It connects to supported external email
+				providers, including Gmail. Your mailbox and email communications remain under the control of your email
+				provider.</p>
+			<h3 id="419ece28-b75d-8066-87e0-d89e2e708842" class="" dir="auto">7.1 Email Access</h3>
+			<p id="419ece28-b75d-80eb-a153-f2eab4e7403b" class="" dir="auto">By connecting an email account, you
+				authorise Relay Mail to access the information and functionality permitted by the permissions you grant.
+			</p>
+			<p id="419ece28-b75d-80f6-9ac8-c0661fc02331" class="" dir="auto">Depending on the permissions and features
+				available, Relay Mail may allow you to:</p>
+			<ul id="419ece28-b75d-805c-a27b-fccf42cbbb0c" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Read and search emails.</li>
+			</ul>
+			<ul id="419ece28-b75d-80c6-b04c-e16a1ece85c0" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Compose and send messages.</li>
+			</ul>
+			<ul id="419ece28-b75d-8090-871d-c86b6a33fd04" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Organise and manage emails.</li>
+			</ul>
+			<ul id="419ece28-b75d-80c8-a98c-cf1dea51c8c9" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Access attachments.</li>
+			</ul>
+			<ul id="419ece28-b75d-8094-beba-e35b612cf48e" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Perform supported mailbox actions.</li>
+			</ul>
+			<h3 id="419ece28-b75d-80ae-9826-fd8344ea0350" class="" dir="auto">7.2 Email Storage</h3>
+			<p id="419ece28-b75d-80f1-8698-c9b33ddadf36" class="" dir="auto">Relay Mail is designed to retrieve email
+				content directly from your connected email provider.</p>
+			<p id="419ece28-b75d-8040-b2f5-db8361677d44" class="" dir="auto">Your emails, attachments, and mailbox
+				contents are not stored as a persistent mailbox on RelayHQ servers.</p>
+			<p id="419ece28-b75d-809d-bb75-c4fb75296aff" class="" dir="auto">RelayHQ does not claim ownership of your
+				email communications.</p>
+			<h3 id="419ece28-b75d-805c-811a-cb5733a8a492" class="" dir="auto">7.3 Google Integration</h3>
+			<p id="419ece28-b75d-806a-a927-de8c53d17f3d" class="" dir="auto">When connecting Gmail, Relay Mail uses
+				Google OAuth and authorised Google APIs.</p>
+			<p id="419ece28-b75d-803e-960b-f01c0dc490c2" class="" dir="auto">Your use of Gmail and Google services
+				remains subject to Google&#x27;s own terms and policies:</p>
+			<ul id="419ece28-b75d-8081-a6bc-d30529cf85a3" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><a href="https://policies.google.com/terms?hl=en-in">Google Terms of
+						Service</a></li>
+			</ul>
+			<ul id="419ece28-b75d-8093-9853-fb0622f5c50b" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><a
+						href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
+						User Data Policy</a></li>
+			</ul>
+			<ul id="419ece28-b75d-80cb-b70e-dc4a57435280" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><a
+						href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google
+						Workspace User Data and Developer Policy</a></li>
+			</ul>
+			<p id="419ece28-b75d-808b-88c4-c7a170d3676a" class="" dir="auto">RelayHQ is an independent service and is
+				not owned, operated, or endorsed by Google.</p>
+			<h3 id="419ece28-b75d-80cb-afac-f791dcd6abaf" class="" dir="auto">7.4 Account Disconnection</h3>
+			<p id="419ece28-b75d-805a-a24b-f39d5bfaf2cc" class="" dir="auto">You may disconnect your Google account or
+				revoke Relay Mail&#x27;s access at any time.</p>
+			<p id="419ece28-b75d-807b-bbc9-e40da1e71f24" class="" dir="auto">Upon logout, RelayHQ manages the associated
+				session and stored authentication credentials according to its account and security procedures.</p>
+			<p id="419ece28-b75d-800f-9036-eadc32f00f5d" class="" dir="auto">Google may independently expire or revoke
+				access tokens under its own policies.</p>
+			<p id="419ece28-b75d-80da-b772-cdbdaea6cb5f" class="" dir="auto">Once authorisation is revoked or expires,
+				Relay Mail may no longer be able to access the connected account.</p>
+			<h3 id="419ece28-b75d-801a-a86b-e7c0152730af" class="" dir="auto">7.5 Third-Party Availability</h3>
+			<p id="419ece28-b75d-804f-8ab0-f9faf56462a7" class="" dir="auto">RelayHQ does not control Gmail, Google
+				APIs, or other external email providers.</p>
+			<p id="419ece28-b75d-80c1-844a-df5165a29bac" class="" dir="auto">Their outages, API restrictions, policy
+				changes, or access limitations may affect Relay Mail functionality.</p>
+			<h2 id="419ece28-b75d-8036-ab8c-f345a492046c" class="" dir="auto">8. Third-Party Services</h2>
+			<p id="419ece28-b75d-807c-ab29-dc7017cfdae1" class="" dir="auto">RelayHQ may integrate with external
+				services for authentication, email delivery, payments, hosting, and other functionality.</p>
+			<p id="419ece28-b75d-801c-bc9f-ec96d952358b" class="" dir="auto">These services operate independently and
+				may have separate terms and privacy policies.</p>
+			<p id="419ece28-b75d-800d-b455-ed712f46ddc0" class="" dir="auto">You are responsible for complying with
+				applicable third-party terms when using their services.</p>
+			<p id="419ece28-b75d-80b2-9551-d0400ea09d6a" class="" dir="auto">RelayHQ does not guarantee the availability
+				or operation of independent third-party platforms.</p>
+			<h2 id="419ece28-b75d-808a-9a80-fdf8b37ef85a" class="" dir="auto">9. Privacy and Data Protection</h2>
+			<p id="419ece28-b75d-806d-b4a3-fce7d8436e6b" class="" dir="auto">Your use of RelayHQ is also governed by our
+				<strong><a href="https://relaymail.online/privacy">Privacy Policy</a></strong>.</p>
+			<p id="419ece28-b75d-8076-8e72-d5bcce578fe6" class="" dir="auto">Our privacy practices are designed around
+				data minimisation and user control.</p>
+			<p id="419ece28-b75d-8078-b248-ead873f75816" class="" dir="auto">In particular:</p>
+			<ul id="419ece28-b75d-8033-8415-f2a3115a1055" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">We do not sell personal information.</li>
+			</ul>
+			<ul id="419ece28-b75d-801d-bb92-fdbf1953e189" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">We do not send email contents to external AI providers.</li>
+			</ul>
+			<ul id="419ece28-b75d-808c-a30f-d940933475c6" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Google authentication credentials stored by RelayHQ are encrypted.</li>
+			</ul>
+			<ul id="419ece28-b75d-80b8-ad6c-e3fcf8dc824c" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">We process information only as necessary to operate and secure our
+					Services.</li>
+			</ul>
+			<p id="419ece28-b75d-80c3-887e-ecd6223da716" class="" dir="auto">Please refer to our Privacy Policy for
+				details about collected information, storage, security, retention, and deletion.</p>
+			<h2 id="419ece28-b75d-80e5-836f-d378584e3532" class="" dir="auto">10. Free and Paid Services</h2>
+			<p id="419ece28-b75d-80b0-91fa-e38d077d7c55" class="" dir="auto">RelayHQ may offer free and paid plans.</p>
+			<p id="419ece28-b75d-808c-9fcf-fd7682fd3b20" class="" dir="auto">Paid subscriptions may include additional
+				functionality, usage allowances, or other benefits. Applicable pricing and billing conditions will be
+				displayed before purchase.</p>
+			<h3 id="419ece28-b75d-806a-8a5a-e31b0d9b5bf7" class="" dir="auto">10.1 Cancellation</h3>
+			<p id="419ece28-b75d-80d7-941a-e870c4097969" class="" dir="auto">You may cancel eligible subscriptions
+				through the available account controls or the relevant purchase platform.</p>
+			<p id="419ece28-b75d-80c2-b63a-e3e482dc4bf4" class="" dir="auto">Cancellation generally prevents future
+				automatic renewals. Access to paid features may continue until the end of the current billing period.
+			</p>
+			<h3 id="419ece28-b75d-8011-bb16-fa6d34df80cc" class="" dir="auto">10.2 Refunds</h3>
+			<p id="419ece28-b75d-80fc-9b26-f8aafacc19cd" class="" dir="auto">Payments are generally non-refundable,
+				including subscription renewals, unused periods, and voluntary cancellations.</p>
+			<p id="419ece28-b75d-8062-97dc-e79f3bb20e45" class="" dir="auto">However, this does not exclude refunds or
+				remedies required by applicable law, non-waivable consumer rights, or the rules of the relevant purchase
+				platform.</p>
+			<p id="419ece28-b75d-80b7-87e1-c3cf7de5670a" class="" dir="auto">For purchases through Google Play or Apple
+				App Store, refund requests may need to be submitted through the respective platform.</p>
+			<h3 id="419ece28-b75d-8042-8bff-c806823f80e0" class="" dir="auto">10.3 Pricing Changes</h3>
+			<p id="419ece28-b75d-8051-9100-caab5a64bec1" class="" dir="auto">RelayHQ may modify subscription pricing or
+				plans.</p>
+			<p id="419ece28-b75d-8084-8a60-f884f975e266" class="" dir="auto">Where required, users will receive advance
+				notice and any necessary opportunity to consent.</p>
+			<h2 id="419ece28-b75d-80f7-abfd-ef2f5e1cfc83" class="" dir="auto">11. Availability and Changes</h2>
+			<p id="419ece28-b75d-806d-8948-d3ca6d2d6a65" class="" dir="auto">We aim to provide reliable Services but
+				cannot guarantee uninterrupted or error-free operation.</p>
+			<p id="419ece28-b75d-807a-8f53-c13ddfc4a1ae" class="" dir="auto">Services may experience interruptions due
+				to:</p>
+			<ul id="419ece28-b75d-808a-99d3-e5d85e1cd153" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Scheduled maintenance.</li>
+			</ul>
+			<ul id="419ece28-b75d-8080-945d-c6aeeb6dc410" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Infrastructure failures.</li>
+			</ul>
+			<ul id="419ece28-b75d-8045-ad8a-ff77a84fed98" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Network issues.</li>
+			</ul>
+			<ul id="419ece28-b75d-80c8-8aaa-e2cec4649b5e" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Security incidents.</li>
+			</ul>
+			<ul id="419ece28-b75d-808f-9ed9-c74fd471ed1f" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Third-party outages.</li>
+			</ul>
+			<ul id="419ece28-b75d-80cd-89c5-fccf2cd2d3e2" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Circumstances beyond our reasonable control.</li>
+			</ul>
+			<p id="419ece28-b75d-80d8-bc5b-e1a3a63bd92d" class="" dir="auto">RelayHQ may modify, improve, restrict, or
+				discontinue features where reasonably necessary.</p>
+			<p id="419ece28-b75d-809d-8a73-d0595dc19478" class="" dir="auto">Where required by law, we will provide
+				appropriate notice of material changes.</p>
+			<h2 id="419ece28-b75d-804f-ad73-c842d4254964" class="" dir="auto">12. Suspension and Termination</h2>
+			<p id="419ece28-b75d-80ef-8e2d-f29631b19fb2" class="" dir="auto">You may stop using our Services at any
+				time.</p>
+			<p id="419ece28-b75d-80ce-8523-f61e00c429e6" class="" dir="auto">RelayHQ may suspend or terminate access
+				when reasonably necessary, including where:</p>
+			<ul id="419ece28-b75d-80d2-9a2d-d2709b10c973" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">These Terms are materially violated.</li>
+			</ul>
+			<ul id="419ece28-b75d-8098-9017-ca42cc2c951b" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">An account is involved in fraud or abuse.</li>
+			</ul>
+			<ul id="419ece28-b75d-80fb-a758-d0f61ebcedea" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Security or infrastructure risks arise.</li>
+			</ul>
+			<ul id="419ece28-b75d-809e-86cd-da2a1be0ac8e" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Applicable laws or third-party restrictions require action.</li>
+			</ul>
+			<ul id="419ece28-b75d-8091-b723-c2adaea771b5" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">A Service is discontinued.</li>
+			</ul>
+			<p id="419ece28-b75d-801b-a827-d3ae29b4efb0" class="" dir="auto">Where reasonably possible and legally
+				permitted, we will provide notice.</p>
+			<p id="419ece28-b75d-8011-b0fa-e804a9f408c3" class="" dir="auto">Termination does not eliminate obligations
+				arising before termination.</p>
+			<h2 id="419ece28-b75d-8070-b829-c8401fa8d898" class="" dir="auto">13. Disclaimers</h2>
+			<p id="419ece28-b75d-8031-9c03-eccd55f60ebe" class="" dir="auto">Services are provided on an
+				<strong>&quot;AS IS&quot;</strong> and <strong>&quot;AS AVAILABLE&quot;</strong> basis, to the maximum
+				extent permitted by applicable law.</p>
+			<p id="419ece28-b75d-80c7-b245-c4b228eeec88" class="" dir="auto">RelayHQ does not guarantee:</p>
+			<ul id="419ece28-b75d-809f-bef1-c3938dd0059a" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Uninterrupted availability.</li>
+			</ul>
+			<ul id="419ece28-b75d-8036-8086-f3f295570084" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Error-free operation.</li>
+			</ul>
+			<ul id="419ece28-b75d-80a4-b4d5-d62e45498960" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Permanent third-party integrations.</li>
+			</ul>
+			<ul id="419ece28-b75d-8043-901c-ff4791650cb2" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Continuous availability of external APIs.</li>
+			</ul>
+			<ul id="419ece28-b75d-803b-aba4-fefaf431b868" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Compatibility with every device or operating environment.</li>
+			</ul>
+			<p id="419ece28-b75d-809a-a418-ce7d43254d71" class="" dir="auto">Nothing in these Terms excludes warranties
+				or consumer rights that cannot legally be excluded.</p>
+			<h2 id="419ece28-b75d-8017-a4e2-f4b8c12325e5" class="" dir="auto">14. Limitation of Liability</h2>
+			<p id="419ece28-b75d-8097-b96c-daeaf185e53e" class="" dir="auto">To the maximum extent permitted by
+				applicable law, RelayHQ shall not be liable for indirect, incidental, special, consequential, or
+				exemplary damages arising from the use of its Services.</p>
+			<p id="419ece28-b75d-80b6-9203-d5dba1badc19" class="" dir="auto">This includes losses arising from external
+				provider outages, network interruptions, unauthorised account access, or circumstances beyond our
+				reasonable control, except where liability cannot legally be excluded.</p>
+			<p id="419ece28-b75d-80cb-8443-e20da63a479a" class="" dir="auto">Nothing in this section limits liability
+				where such limitation is prohibited by law.</p>
+			<h2 id="419ece28-b75d-80d0-85c8-e40fe68647ee" class="" dir="auto">15. Changes to These Terms</h2>
+			<p id="419ece28-b75d-80cd-8b58-f1d0eb6334e5" class="" dir="auto">We may update these Terms as our Services,
+				organisation, or legal obligations evolve.</p>
+			<p id="419ece28-b75d-8007-a7b9-c1e6ebc606e5" class="" dir="auto">Updated versions will be published on our
+				official website with a revised <strong>Last Updated</strong> date.</p>
+			<p id="419ece28-b75d-8041-98e4-c6a24cc3ce0d" class="" dir="auto">Material changes may also be communicated
+				through email or in-app notifications.</p>
+			<p id="419ece28-b75d-80b5-b6aa-f32312e6f3d1" class="" dir="auto">Where required by law, renewed acceptance
+				will be requested.</p>
+			<h2 id="419ece28-b75d-80f3-a04c-c2efc101760d" class="" dir="auto">16. Governing Law</h2>
+			<p id="419ece28-b75d-800f-8ea4-c5c49b5f8b30" class="" dir="auto">These Terms are governed by the laws of
+				<strong>India</strong>, subject to applicable consumer protection laws and mandatory legal rights.</p>
+			<p id="419ece28-b75d-80b2-884e-fcaeac62a791" class="" dir="auto">Disputes should first be addressed through
+				good-faith communication where appropriate.</p>
+			<p id="419ece28-b75d-80f8-87ac-da8dbc1e826d" class="" dir="auto">Unresolved disputes will be handled by
+				competent courts or dispute-resolution authorities in India, subject to applicable jurisdictional rules.
+			</p>
+			<h2 id="419ece28-b75d-80be-9ebc-df77cb579941" class="" dir="auto">17. General Provisions</h2>
+			<p id="419ece28-b75d-8060-86a0-d70c17fac52f" class="" dir="auto"><strong>Severability:</strong> If any
+				provision of these Terms is found unenforceable, the remaining provisions will continue to apply.</p>
+			<p id="419ece28-b75d-80ab-87eb-d8f3a8f32621" class="" dir="auto"><strong>Entire Agreement:</strong> These
+				Terms, together with our Privacy Policy and applicable product-specific terms, constitute the agreement
+				governing your use of RelayHQ Services.</p>
+			<p id="419ece28-b75d-8096-9d61-f233ba27659e" class="" dir="auto"><strong>No Waiver:</strong> Failure to
+				enforce a provision does not constitute a waiver of that provision.</p>
+			<h2 id="419ece28-b75d-80e7-9f9d-fa2957a88e38" class="" dir="auto">18. Contact Information</h2>
+			<p id="419ece28-b75d-807e-bbc5-e4bf2929470b" class="" dir="auto">For questions, legal notices, or concerns
+				regarding these Terms, contact:</p>
+			<p id="419ece28-b75d-805e-b479-c2ab843b75ac" class="" dir="auto"><strong>RelayHQ Legal Team</strong></p>
+			<ul id="419ece28-b75d-80c8-beff-e6f23cbfe94e" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>Email:</strong> <a
+						href="mailto:sohamglxi@gmail.com">sohamglxi@gmail.com</a></li>
+			</ul>
+			<ul id="419ece28-b75d-8053-b40c-f6f0145bc958" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>Address:</strong> Kolkata, West Bengal, India</li>
+			</ul>
+			<ul id="419ece28-b75d-8075-8f89-ec42691c9f2a" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>Website:</strong> <a
+						href="https://app.relaymail.online/">https://app.relaymail.online</a></li>
+			</ul>
+			<hr id="419ece28-b75d-8013-a4d1-d8013f557d7b" dir="auto" />
+			<p id="419ece28-b75d-8043-b4b7-f4d39e3bb53d" class="" dir="auto"><em>End of RelayHQ Terms of Use</em></p>
+			<p id="419ece28-b75d-80ab-b793-f3e492e338a6" class="" dir="auto">
+			</p>
+		</div>
+	</article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body>
+
+</html>

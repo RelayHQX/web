@@ -1,0 +1,1639 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Privacy Policy</title>
+	<style>
+		/* cspell:disable-file */
+		/* webkit printing magic: print all background colors */
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		@media only screen {
+			body {
+				margin: 2em auto;
+				max-width: 900px;
+				color: rgb(55, 53, 47);
+			}
+		}
+
+		body {
+			line-height: 1.5;
+			white-space: pre-wrap;
+		}
+
+		a,
+		a.visited {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 80%;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		/* Override strong tags inside headings to maintain consistent weight */
+		h1 strong,
+		h2 strong,
+		h3 strong {
+			font-weight: 600;
+		}
+
+		.page-title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 1.875rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+		.source {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 1.5em;
+			word-break: break-all;
+		}
+
+		.callout {
+			border-radius: 10px;
+			padding: 1rem;
+			/* Paint a complete callout box on every PDF page fragment. */
+			-webkit-box-decoration-break: clone;
+			box-decoration-break: clone;
+		}
+
+		/* For default-background callouts, render the border outline. */
+		.callout.block-color-default_background {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		figure {
+			margin: 1.25em 0;
+			page-break-inside: avoid;
+		}
+
+		/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+		details,
+		aside {
+			margin: 1.25em 0;
+		}
+
+		/* Keep a toggle's title on the same page as the start of its content. */
+		summary {
+			page-break-after: avoid;
+			break-after: avoid;
+		}
+
+		/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+		summary h1,
+		summary h2,
+		summary h3,
+		summary h4 {
+			margin-top: 0;
+		}
+
+		figcaption {
+			opacity: 0.5;
+			font-size: 85%;
+			margin-top: 0.5em;
+		}
+
+		mark {
+			background-color: transparent;
+		}
+
+		.indented {
+			padding-left: 1.5em;
+		}
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+
+			table.collection-content {
+				width: 100%;
+				table-layout: fixed;
+			}
+
+			table.collection-content th,
+			table.collection-content td {
+				overflow-wrap: anywhere;
+			}
+
+			table.collection-content td>.user,
+			table.collection-content td>time {
+				white-space: pre-wrap;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content-wrapper {
+			overflow-x: auto;
+		}
+
+		@media only print {
+			.collection-content-wrapper {
+				overflow-x: visible;
+			}
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.collection-content td {
+			white-space: pre-wrap;
+			word-break: break-word;
+		}
+
+		.column-list {
+			display: flex;
+			gap: 46px;
+		}
+
+		.column {
+			min-width: 0;
+			overflow: hidden;
+		}
+
+		.column>*:first-child {
+			margin-top: 0;
+		}
+
+		.table_of_contents-item {
+			display: block;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			padding-inline: 0.125rem;
+			padding-block: 0.375rem;
+		}
+
+		.table_of_contents-indent-1 {
+			margin-left: 1.5rem;
+		}
+
+		.table_of_contents-indent-2 {
+			margin-left: 3rem;
+		}
+
+		.table_of_contents-indent-3 {
+			margin-left: 4.5rem;
+		}
+
+		.table_of_contents-link {
+			text-decoration: none;
+			opacity: 0.7;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		table {
+			border-collapse: collapse;
+			border-left: none;
+			border-right: none;
+		}
+
+		th,
+		td {
+			font-weight: normal;
+			padding: 0.25em 0.5em;
+			line-height: 1.5;
+			min-height: 1.5em;
+			text-align: left;
+		}
+
+		th {
+			color: rgba(55, 53, 47, 0.6);
+		}
+
+		ol,
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+		}
+
+		ul.to-do-list {
+			padding-inline-start: 0;
+		}
+
+		ul.to-do-list>li {
+			list-style: none;
+		}
+
+		.to-do-children-checked {
+			text-decoration: line-through;
+			opacity: 0.375;
+		}
+
+		ul.toggle>li {
+			list-style: none;
+		}
+
+		ul {
+			padding-inline-start: 1.7em;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		ol {
+			padding-inline-start: 1.6em;
+		}
+
+		ol.numbered-list.numbered-list-digits-2 {
+			padding-inline-start: 2em;
+		}
+
+		ol.numbered-list.numbered-list-digits-3plus {
+			padding-inline-start: 2.4em;
+		}
+
+		ol>li {
+			padding-left: 0.2em;
+		}
+
+		.mono ol {
+			padding-inline-start: 2em;
+		}
+
+		.mono ol>li {
+			text-indent: -0.4em;
+		}
+
+		.toggle {
+			padding-inline-start: 0em;
+			list-style-type: none;
+		}
+
+		/* Indent toggle children */
+		.toggle>li>details {
+			padding-left: 1.7em;
+		}
+
+		.toggle>li>details>summary {
+			margin-left: -1.1em;
+		}
+
+		.selected-value {
+			display: inline-block;
+			padding: 0 0.5em;
+			background: rgba(206, 205, 202, 0.5);
+			border-radius: 3px;
+			margin-right: 0.5em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+			white-space: nowrap;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.page-description {
+			margin-bottom: 2em;
+		}
+
+		.simple-table {
+			margin-top: 1em;
+			font-size: 0.875rem;
+			empty-cells: show;
+		}
+
+		.simple-table td {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table th {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table-header-color {
+			background: rgb(247, 246, 243);
+			color: black;
+		}
+
+		.simple-table-header {
+			font-weight: 500;
+		}
+
+		time {
+			opacity: 0.5;
+		}
+
+		.icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 1.2em;
+			max-height: 1.2em;
+			text-decoration: none;
+			vertical-align: text-bottom;
+			margin-right: 0.5em;
+		}
+
+		/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+		.icon[data-emoji]::before {
+			content: attr(data-emoji);
+		}
+
+		img.icon {
+			border-radius: 3px;
+		}
+
+		.callout img.notion-static-icon {
+			width: 1em;
+			height: 1em;
+		}
+
+		.callout p {
+			margin: 0;
+		}
+
+		.callout h1,
+		.callout h2,
+		.callout h3 {
+			margin: 0 0 0.6rem;
+		}
+
+		.user-icon {
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+		}
+
+		.user-icon-inner {
+			font-size: 0.8em;
+		}
+
+		.text-icon {
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		.page-cover-image {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			max-height: 30vh;
+		}
+
+		.page-header-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.page-header-icon-with-cover {
+			margin-top: -0.72em;
+			margin-left: 0.07em;
+		}
+
+		.page-header-icon img {
+			border-radius: 3px;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+
+		p>.user {
+			opacity: 0.5;
+		}
+
+		td>.user,
+		td>time {
+			white-space: nowrap;
+		}
+
+		input[type="checkbox"] {
+			margin-right: 0.4em;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.image {
+			border: none;
+			margin: 1.5em 0;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+		}
+
+		.code,
+		code {
+			background: rgba(135, 131, 120, 0.15);
+			border-radius: 3px;
+			padding: 0.2em 0.4em;
+			border-radius: 3px;
+			font-size: 85%;
+			tab-size: 2;
+		}
+
+		code {
+			color: #eb5757;
+		}
+
+		.code {
+			padding: 1.5em 1em;
+		}
+
+		.code-wrap {
+			white-space: pre-wrap;
+			word-break: break-all;
+		}
+
+		.code>code {
+			background: none;
+			padding: 0;
+			font-size: 100%;
+			color: inherit;
+		}
+
+		blockquote {
+			font-size: 1em;
+			margin: 1em 0;
+			padding-left: 1em;
+			border-left: 3px solid rgb(55, 53, 47);
+		}
+
+		blockquote.quote-large {
+			font-size: 1.25em;
+		}
+
+		.bookmark {
+			text-decoration: none;
+			max-height: 8em;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+
+		.bookmark-title {
+			font-size: 0.85em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.75em;
+			white-space: nowrap;
+		}
+
+		.bookmark-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bookmark-info {
+			flex: 4 1 180px;
+			padding: 12px 14px 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.bookmark-image {
+			width: 33%;
+			flex: 1 1 180px;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			border-radius: 1px;
+		}
+
+		.bookmark-description {
+			color: rgba(55, 53, 47, 0.6);
+			font-size: 0.75em;
+			overflow: hidden;
+			max-height: 4.5em;
+			word-break: break-word;
+		}
+
+		.bookmark-href {
+			font-size: 0.75em;
+			margin-top: 0.25em;
+		}
+
+		.tab {
+			margin: 1.25em 0;
+			padding-inline: 1rem;
+			border: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.code {
+			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+		}
+
+		.serif {
+			font-family: Lyon-Text, Georgia, ui-serif, serif;
+		}
+
+		.mono {
+			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+		}
+
+		.pdf .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+		}
+
+		.pdf .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.pdf .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+		}
+
+		.pdf .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.highlight-default {
+			color: rgba(44, 44, 43, 1);
+		}
+
+		.highlight-gray {
+			color: rgba(125, 122, 117, 1);
+			fill: rgba(125, 122, 117, 1);
+		}
+
+		.highlight-brown {
+			color: rgba(159, 118, 90, 1);
+			fill: rgba(159, 118, 90, 1);
+		}
+
+		.highlight-orange {
+			color: rgba(210, 123, 45, 1);
+			fill: rgba(210, 123, 45, 1);
+		}
+
+		.highlight-yellow {
+			color: rgba(203, 148, 52, 1);
+			fill: rgba(203, 148, 52, 1);
+		}
+
+		.highlight-teal {
+			color: rgba(80, 148, 110, 1);
+			fill: rgba(80, 148, 110, 1);
+		}
+
+		.highlight-blue {
+			color: rgba(56, 125, 201, 1);
+			fill: rgba(56, 125, 201, 1);
+		}
+
+		.highlight-purple {
+			color: rgba(154, 107, 180, 1);
+			fill: rgba(154, 107, 180, 1);
+		}
+
+		.highlight-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.highlight-red {
+			color: rgba(207, 81, 72, 1);
+			fill: rgba(207, 81, 72, 1);
+		}
+
+		.highlight-default_background {
+			color: rgba(44, 44, 43, 1);
+		}
+
+		.highlight-gray_background {
+			background: rgba(42, 28, 0, 0.07);
+		}
+
+		.highlight-brown_background {
+			background: rgba(139, 46, 0, 0.086);
+		}
+
+		.highlight-orange_background {
+			background: rgba(224, 101, 1, 0.129);
+		}
+
+		.highlight-yellow_background {
+			background: rgba(211, 168, 0, 0.137);
+		}
+
+		.highlight-teal_background {
+			background: rgba(0, 100, 45, 0.09);
+		}
+
+		.highlight-blue_background {
+			background: rgba(0, 124, 215, 0.094);
+		}
+
+		.highlight-purple_background {
+			background: rgba(102, 0, 178, 0.078);
+		}
+
+		.highlight-pink_background {
+			background: rgba(197, 0, 93, 0.086);
+		}
+
+		.highlight-red_background {
+			background: rgba(223, 22, 0, 0.094);
+		}
+
+		.block-color-default {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray {
+			color: rgba(125, 122, 117, 1);
+			fill: rgba(125, 122, 117, 1);
+		}
+
+		.block-color-brown {
+			color: rgba(159, 118, 90, 1);
+			fill: rgba(159, 118, 90, 1);
+		}
+
+		.block-color-orange {
+			color: rgba(210, 123, 45, 1);
+			fill: rgba(210, 123, 45, 1);
+		}
+
+		.block-color-yellow {
+			color: rgba(203, 148, 52, 1);
+			fill: rgba(203, 148, 52, 1);
+		}
+
+		.block-color-teal {
+			color: rgba(80, 148, 110, 1);
+			fill: rgba(80, 148, 110, 1);
+		}
+
+		.block-color-blue {
+			color: rgba(56, 125, 201, 1);
+			fill: rgba(56, 125, 201, 1);
+		}
+
+		.block-color-purple {
+			color: rgba(154, 107, 180, 1);
+			fill: rgba(154, 107, 180, 1);
+		}
+
+		.block-color-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.block-color-red {
+			color: rgba(207, 81, 72, 1);
+			fill: rgba(207, 81, 72, 1);
+		}
+
+		.block-color-default_background {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray_background {
+			background: rgba(240, 239, 237, 1);
+		}
+
+		.block-color-brown_background {
+			background: rgba(245, 237, 233, 1);
+		}
+
+		.block-color-orange_background {
+			background: rgba(251, 235, 222, 1);
+		}
+
+		.block-color-yellow_background {
+			background: rgba(249, 243, 220, 1);
+		}
+
+		.block-color-teal_background {
+			background: rgba(232, 241, 236, 1);
+		}
+
+		.block-color-blue_background {
+			background: rgba(229, 242, 252, 1);
+		}
+
+		.block-color-purple_background {
+			background: rgba(243, 235, 249, 1);
+		}
+
+		.block-color-pink_background {
+			background: rgba(250, 233, 241, 1);
+		}
+
+		.block-color-red_background {
+			background: rgba(252, 233, 231, 1);
+		}
+
+		.select-value-color-default {
+			background-color: rgba(42, 28, 0, 0.07);
+		}
+
+		.select-value-color-gray {
+			background-color: rgba(28, 19, 1, 0.11);
+		}
+
+		.select-value-color-brown {
+			background-color: rgba(127, 51, 0, 0.156);
+		}
+
+		.select-value-color-orange {
+			background-color: rgba(196, 88, 0, 0.203);
+		}
+
+		.select-value-color-yellow {
+			background-color: rgba(209, 156, 0, 0.282);
+		}
+
+		.select-value-color-green {
+			background-color: rgba(0, 96, 38, 0.156);
+		}
+
+		.select-value-color-blue {
+			background-color: rgba(0, 118, 217, 0.203);
+		}
+
+		.select-value-color-purple {
+			background-color: rgba(92, 0, 163, 0.141);
+		}
+
+		.select-value-color-pink {
+			background-color: rgba(183, 0, 78, 0.152);
+		}
+
+		.select-value-color-red {
+			background-color: rgba(206, 24, 0, 0.164);
+		}
+
+		.checkbox {
+			display: inline-flex;
+			vertical-align: text-bottom;
+			width: 16;
+			height: 16;
+			background-size: 16px;
+			margin-left: 2px;
+			margin-right: 5px;
+		}
+
+		.checkbox-on {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.checkbox-off {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+	
+html, body {
+  background-color: #000000 !important;
+  color: #d4d4d4 !important;
+  color-scheme: dark !important;
+}
+@media only screen {
+  body {
+    margin: 2em auto;
+    max-width: 900px;
+    color: #d4d4d4 !important;
+    background-color: #000000 !important;
+    padding: 0 1.5rem;
+  }
+}
+h1, h2, h3, strong {
+  color: #ffffff !important;
+}
+h1.page-title {
+  color: #ffffff !important;
+}
+a, a.visited {
+  color: #ffffff !important;
+}
+hr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.simple-table {
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.simple-table th, .simple-table td {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #d4d4d4 !important;
+}
+.simple-table-header {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+.page-header-icon img.icon {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+</style>
+	<style>
+		@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')
+	</style>
+</head>
+
+<body>
+	<article id="418ece28-b75d-80f5-8927-d8e3fddf0bc4" class="page sans"
+		data-notion-page-icon="https://s3-us-west-2.amazonaws.com/public.notion-static.com/2c687b0a-2228-4827-a848-4d0f523f02aa/shield-check-stroke-rounded.svg">
+		<header>
+			<div class="page-header-icon undefined"><img class="icon"
+					src="shield-check-stroke-rounded.svg" /></div>
+			<h1 class="page-title" dir="auto">Privacy Policy</h1>
+			<p class="page-description" dir="auto"></p>
+		</header>
+		<div class="page-body">
+			<p id="419ece28-b75d-8017-a138-fe961a2fc99b" class="" dir="auto"><strong>Effective Date:</strong> 14
+				November 2026</p>
+			<p id="419ece28-b75d-80b9-8470-d95d224c006b" class="" dir="auto"><strong>Last Updated:</strong> 14 November
+				2026</p>
+			<p id="419ece28-b75d-809e-a30f-c39c65c19d79" class="" dir="auto"><strong>Version:</strong> 1.0</p>
+			<hr id="419ece28-b75d-8008-ab32-ebf5fb949830" dir="auto" />
+			<h2 id="419ece28-b75d-8009-8736-d934eaaf8b0e" class="" dir="auto">1. Introduction</h2>
+			<p id="419ece28-b75d-80ba-9233-d1b4d9461cb4" class="" dir="auto">Welcome to <strong>RelayHQ</strong>.</p>
+			<p id="419ece28-b75d-8046-ae16-c6054c4f33f3" class="" dir="auto">Your privacy matters to us. We believe
+				privacy should be built into products from the beginning, not added as an afterthought.</p>
+			<p id="419ece28-b75d-80b4-a491-c0e280f7011b" class="" dir="auto">This Privacy Policy explains how RelayHQ
+				(&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) collects, uses, stores, and protects information
+				when you use our applications, websites, software, and related services (&quot;Services&quot;).</p>
+			<p id="419ece28-b75d-8089-ab1f-c3c0e2d57290" class="" dir="auto">RelayHQ follows a privacy-first approach
+				based on data minimisation, transparency, security, and user control.</p>
+			<p id="419ece28-b75d-80ff-9a78-fc90cba30b35" class="" dir="auto">This policy applies across RelayHQ
+				Services. Individual products may provide additional privacy notices where specific functionality
+				requires them.</p>
+			<h2 id="419ece28-b75d-8010-a73f-fd286026df9b" class="" dir="auto">2. About RelayHQ</h2>
+			<table id="419ece28-b75d-804e-a2ec-c5f301f90337" class="simple-table" dir="ltr">
+				<thead class="simple-table-header">
+					<tr id="419ece28-b75d-80e4-a9e0-ce0ced218ba6" dir="ltr">
+						<th id="UzNy" class="simple-table-header-color simple-table-header">Detail</th>
+						<th id="~fdQ" class="simple-table-header-color simple-table-header">Information</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="419ece28-b75d-80ee-a418-f05bc17bb3c4" dir="ltr">
+						<td id="UzNy" class="">Organisation</td>
+						<td id="~fdQ" class="">RelayHQ</td>
+					</tr>
+					<tr id="419ece28-b75d-80f7-b0fb-e6797f816755" dir="ltr">
+						<td id="UzNy" class="">Registered Address</td>
+						<td id="~fdQ" class="">Kolkata, West Bengal, India</td>
+					</tr>
+					<tr id="419ece28-b75d-80df-a491-cf0096d2ff40" dir="ltr">
+						<td id="UzNy" class="">Website</td>
+						<td id="~fdQ" class=""><a href="https://app.relaymail.online/">https://app.relaymail.online</a>
+						</td>
+					</tr>
+					<tr id="419ece28-b75d-801e-94bd-dda5fbb82bfe" dir="ltr">
+						<td id="UzNy" class="">Privacy Contact</td>
+						<td id="~fdQ" class=""><a href="mailto:sohamglxi@gmail.com">sohamglxi@gmail.com</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<p id="419ece28-b75d-8073-8616-c846f10b0e89" class="" dir="auto">Depending on the applicable processing
+				activity and law, RelayHQ may act as a data fiduciary, data controller, or equivalent responsible
+				entity.</p>
+			<h2 id="419ece28-b75d-8030-816e-de1f021c8176" class="" dir="auto">3. Information We Collect</h2>
+			<p id="419ece28-b75d-8066-b16c-efbabede55f5" class="" dir="auto">We collect only the information reasonably
+				necessary to provide and secure our Services.</p>
+			<p id="419ece28-b75d-8036-a517-c582849400c3" class="" dir="auto">For Relay Mail, this primarily includes:
+			</p>
+			<h3 id="419ece28-b75d-8058-9525-dcd63e14a7d7" class="" dir="auto">3.1 Google Account Information</h3>
+			<p id="419ece28-b75d-807b-a212-eb9c38bf88bf" class="" dir="auto">When you sign in using Google, we receive
+				and store the profile information authorised through Google authentication:</p>
+			<ul id="419ece28-b75d-8036-bfe5-e0774d782f47" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Name.</li>
+			</ul>
+			<ul id="419ece28-b75d-8038-a5ac-fa3050a0ecf5" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Google account email address.</li>
+			</ul>
+			<ul id="419ece28-b75d-80e5-b81f-fe665f626685" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Profile picture.</li>
+			</ul>
+			<ul id="419ece28-b75d-809c-92b1-c08b99055df9" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Google account identifier.</li>
+			</ul>
+			<p id="419ece28-b75d-80de-b147-e9785b92a3e6" class="" dir="auto">We use this information to identify your
+				Relay account, display your profile, and manage your connected account.</p>
+			<h3 id="419ece28-b75d-80b6-aff4-ca889474ef74" class="" dir="auto">3.2 Authentication Credentials</h3>
+			<p id="419ece28-b75d-804d-b0a3-d4d2b4b100ec" class="" dir="auto">When you connect Gmail, Google provides
+				OAuth credentials according to the permissions you authorise.</p>
+			<p id="419ece28-b75d-8068-a698-cc64a01748b5" class="" dir="auto">These may include:</p>
+			<ul id="419ece28-b75d-8040-a4e2-c4f680ddf908" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Access tokens.</li>
+			</ul>
+			<ul id="419ece28-b75d-80b5-860c-dfe5cfe8df9f" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Refresh tokens.</li>
+			</ul>
+			<ul id="419ece28-b75d-80d3-b690-debe1d715ab7" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Authentication and authorisation metadata.</li>
+			</ul>
+			<p id="419ece28-b75d-80f1-89b5-e6cc9c78e1af" class="" dir="auto"><strong>Your OAuth credentials are
+					encrypted before being stored on RelayHQ infrastructure.</strong></p>
+			<p id="419ece28-b75d-8003-83d8-cf13f16b1200" class="" dir="auto">They are used only to maintain your
+				authorised connection and perform the functionality you request.</p>
+			<p id="419ece28-b75d-8008-8b94-e2a789b11993" class="" dir="auto">We apply safeguards including restricted
+				access, secure credential handling, and session lifecycle management.</p>
+			<h3 id="419ece28-b75d-8018-96fb-d81f77fce976" class="" dir="auto">3.3 Session and Security Information</h3>
+			<p id="419ece28-b75d-804b-8077-e0f22ac84d17" class="" dir="auto">We may store limited information necessary
+				to authenticate users and protect accounts, including:</p>
+			<ul id="419ece28-b75d-80a9-ba3d-dcd3b053e679" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Session identifiers.</li>
+			</ul>
+			<ul id="419ece28-b75d-8005-8cda-d2c90b426af8" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Session creation and expiration timestamps.</li>
+			</ul>
+			<ul id="419ece28-b75d-80c8-9d9f-f2dbaa8a0c44" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Account references.</li>
+			</ul>
+			<ul id="419ece28-b75d-8030-9e52-c4536d62e606" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Session status.</li>
+			</ul>
+			<ul id="419ece28-b75d-802b-af9d-f48d9e557578" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Security-related events.</li>
+			</ul>
+			<p id="419ece28-b75d-80a8-91bc-d72b49800461" class="" dir="auto">Expired sessions are removed through
+				cleanup processes.</p>
+			<p id="419ece28-b75d-804d-9fc0-cc790618f9cd" class="" dir="auto">When you log out or disconnect your
+				account, associated sessions are invalidated and relevant authentication credentials are cleared or
+				deleted according to the connection-management process.</p>
+			<p id="419ece28-b75d-8050-a140-d82c44ee1fbc" class="" dir="auto">Where applicable, Google token revocation
+				is also requested.</p>
+			<h3 id="419ece28-b75d-8048-9ff6-d31aac1280b9" class="" dir="auto">3.4 Technical Information</h3>
+			<p id="419ece28-b75d-80da-b943-e213fe73b97f" class="" dir="auto">We may process limited technical
+				information to operate and secure our Services, including:</p>
+			<ul id="419ece28-b75d-80b3-9c93-cb7cc6e94213" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">IP addresses where necessary.</li>
+			</ul>
+			<ul id="419ece28-b75d-80ed-927d-d1493e2b3299" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Application and operating system versions.</li>
+			</ul>
+			<ul id="419ece28-b75d-80fc-be78-d8f80940a4f8" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Authentication timestamps.</li>
+			</ul>
+			<ul id="419ece28-b75d-8016-998d-f82787e458f6" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">API request metadata.</li>
+			</ul>
+			<ul id="419ece28-b75d-8026-a2a8-c537cf4408f9" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Error and crash diagnostics.</li>
+			</ul>
+			<ul id="419ece28-b75d-80dc-afb4-f3040d91fc48" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Security and abuse-prevention signals.</li>
+			</ul>
+			<p id="419ece28-b75d-80f4-ac64-db60f3a6896a" class="" dir="auto">We do not intentionally collect unnecessary
+				information for behavioural profiling or advertising.</p>
+			<h2 id="419ece28-b75d-8074-a8a2-cfb501953ce8" class="" dir="auto">4. Email Privacy: How Relay Mail Works
+			</h2>
+			<p id="419ece28-b75d-8060-94c6-ec295f4f396d" class="" dir="auto"><strong>Relay Mail is an email client, not
+					an email hosting provider.</strong></p>
+			<p id="419ece28-b75d-8041-94ef-e17ead42159f" class="" dir="auto">It connects to external email providers
+				such as Gmail to let you access and manage your existing mailbox.</p>
+			<p id="419ece28-b75d-8092-90ef-e12f0644f488" class="" dir="auto">Your mailbox remains with your email
+				provider. It does not become a RelayHQ mailbox.</p>
+			<h3 id="419ece28-b75d-80a6-bed6-e10e186ef314" class="" dir="auto">4.1 Your Emails Are Not Stored on RelayHQ
+				Servers</h3>
+			<p id="419ece28-b75d-8032-9f65-c62a90608f14" class="" dir="auto">Relay Mail retrieves email information
+				directly from your connected email provider when needed.</p>
+			<p id="419ece28-b75d-8050-a58a-ea52f928f31a" class="" dir="auto">We do not persistently store your:</p>
+			<ul id="419ece28-b75d-80eb-a277-f8978daa2174" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Email message bodies.</li>
+			</ul>
+			<ul id="419ece28-b75d-8068-b09c-d54d09bf256f" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Inbox and sent messages.</li>
+			</ul>
+			<ul id="419ece28-b75d-80c8-a591-e50543264f8b" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Draft contents.</li>
+			</ul>
+			<ul id="419ece28-b75d-80a8-b7d9-c9d336bfe07b" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Email attachments.</li>
+			</ul>
+			<ul id="419ece28-b75d-80f4-9b8e-eb722aaac4f5" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Message history.</li>
+			</ul>
+			<ul id="419ece28-b75d-8055-954e-fb8b94c39d74" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Mailbox conversations.</li>
+			</ul>
+			<p id="419ece28-b75d-80cf-a7df-e29cf9df7c11" class="" dir="auto">Email information may be temporarily
+				processed in memory or transmitted through the systems necessary to fulfil your requests.</p>
+			<p id="419ece28-b75d-800b-9b85-fa09bc44ef38" class="" dir="auto">However, RelayHQ does not maintain a
+				persistent duplicate mailbox on its servers.</p>
+			<p id="419ece28-b75d-80cb-8a09-e2563556f1d5" class="" dir="auto">We do not intentionally store mailbox
+				contents in persistent application databases, analytics systems, server logs, or backups.</p>
+			<h3 id="419ece28-b75d-8000-86f0-eedbd4cc4eac" class="" dir="auto">4.2 Email Ownership</h3>
+			<p id="419ece28-b75d-8069-8016-c21796f2e06e" class="" dir="auto">Your emails, attachments, drafts, and
+				communications remain under the control of your email provider.</p>
+			<p id="419ece28-b75d-8061-9d1d-c724a947c273" class="" dir="auto">Connecting your account to Relay Mail does
+				not transfer ownership of your mailbox or its contents to RelayHQ.</p>
+			<h3 id="419ece28-b75d-809b-988b-dc57bbedb379" class="" dir="auto">4.3 Email Actions</h3>
+			<p id="419ece28-b75d-808b-be2a-c75776f5938b" class="" dir="auto">Depending on your permissions, Relay Mail
+				may allow you to:</p>
+			<ul id="419ece28-b75d-8062-aef1-f4aea15dd0b6" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Read and search messages.</li>
+			</ul>
+			<ul id="419ece28-b75d-8070-8971-ceb84010a9bc" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Compose and send emails.</li>
+			</ul>
+			<ul id="419ece28-b75d-80ae-b41a-d4cfc5266251" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Organise your mailbox.</li>
+			</ul>
+			<ul id="419ece28-b75d-80b8-bf17-e1bfc5208926" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Access attachments.</li>
+			</ul>
+			<ul id="419ece28-b75d-8088-9a6f-d8ddee4c27ea" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Perform supported email-management actions.</li>
+			</ul>
+			<p id="419ece28-b75d-80e2-b9c7-c25ff9b2ea25" class="" dir="auto">These operations are performed through your
+				connected email provider.</p>
+			<h3 id="419ece28-b75d-80e1-8665-fc093e85405f" class="" dir="auto">4.4 Email Provider Availability</h3>
+			<p id="419ece28-b75d-804f-8d26-dbeb83f5a1b9" class="" dir="auto">Relay Mail depends on external providers
+				for mailbox functionality.</p>
+			<p id="419ece28-b75d-808b-87c5-e785544396bc" class="" dir="auto">Access may be affected by provider outages,
+				API restrictions, account limitations, expired tokens, or changes to third-party permissions.</p>
+			<h3 id="419ece28-b75d-803a-a700-c29c1d95f103" class="" dir="auto">4.5 Remote Email Content and Tracking</h3>
+			<p id="419ece28-b75d-805e-a566-f02e51e48de3" class="" dir="auto">Email messages may contain tracking pixels,
+				remote images, and externally hosted resources.</p>
+			<p id="419ece28-b75d-80ab-8bb0-f96be422c5f1" class="" dir="auto">Loading these resources may disclose
+				technical information, such as your IP address, approximate location, or message-opening activity, to
+				the sender or external provider.</p>
+			<p id="419ece28-b75d-8091-9e4f-d82778ee8f20" class="" dir="auto">Opening links or downloading attachments
+				may also disclose information independently of Relay Mail.</p>
+			<p id="419ece28-b75d-8017-b92d-cf92517ae0b2" class="" dir="auto">Where remote-content privacy controls are
+				available, their operation and limitations will be explained within the product.</p>
+			<h2 id="419ece28-b75d-8002-bb8f-c9e454102d43" class="" dir="auto">5. Google Services and Third-Party
+				Integration</h2>
+			<p id="419ece28-b75d-8003-8fff-e290162ceabc" class="" dir="auto">Relay Mail uses Google OAuth and authorised
+				Google APIs to connect your Gmail account.</p>
+			<p id="419ece28-b75d-805e-9d1a-c8c16a789540" class="" dir="auto">Google remains an independent third-party
+				service provider.</p>
+			<p id="419ece28-b75d-8056-9c52-c95fd5ce2232" class="" dir="auto">Your use of Google services is subject to
+				Google&#x27;s applicable terms and policies:</p>
+			<ul id="419ece28-b75d-8017-8800-d47f6f1da886" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><a href="https://policies.google.com/terms?hl=en-in">Google Terms of
+						Service</a></li>
+			</ul>
+			<ul id="419ece28-b75d-8016-863b-f563fc28946a" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><a
+						href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
+						User Data Policy</a></li>
+			</ul>
+			<ul id="419ece28-b75d-8008-a6a2-d820908eb580" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><a
+						href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google
+						Workspace User Data and Developer Policy</a></li>
+			</ul>
+			<ul id="419ece28-b75d-8044-8300-da8df9762924" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><a href="https://developers.google.com/terms">Google APIs Terms of
+						Service</a></li>
+			</ul>
+			<h3 id="419ece28-b75d-80d7-a345-e784ce06ac8d" class="" dir="auto">5.1 Google Data Usage</h3>
+			<p id="419ece28-b75d-8054-9230-fbc066d1fedd" class="" dir="auto">We use information obtained through Google
+				APIs only to provide the functionality you authorise.</p>
+			<p id="419ece28-b75d-808a-a6e4-cf851b5fa3ba" class="" dir="auto">In particular:</p>
+			<ul id="419ece28-b75d-80ef-9391-e2a5b1c243b4" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">We do not sell Google user data.</li>
+			</ul>
+			<ul id="419ece28-b75d-8096-b51c-c577aedb4ef9" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">We do not use Google data for advertising.</li>
+			</ul>
+			<ul id="419ece28-b75d-802f-b921-e7752a009384" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">We do not send email contents or Google account data to external AI
+					providers.</li>
+			</ul>
+			<ul id="419ece28-b75d-807c-80a6-f7a43c508697" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">We do not use Google user data to train general-purpose AI models.</li>
+			</ul>
+			<ul id="419ece28-b75d-80c1-bdce-e80da5ca65d1" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">We restrict access to authorised operational purposes.</li>
+			</ul>
+			<ul id="419ece28-b75d-8009-a71d-f44771aa45c8" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">We request permissions necessary for the features we provide.</li>
+			</ul>
+			<h3 id="419ece28-b75d-80de-a4d3-cbbc9780e0c0" class="" dir="auto">5.2 Disconnecting Google</h3>
+			<p id="419ece28-b75d-8094-b2c4-dd8532c27f86" class="" dir="auto">You may disconnect your Google account or
+				revoke Relay Mail&#x27;s access at any time.</p>
+			<p id="419ece28-b75d-80bc-997f-f12e5278e268" class="" dir="auto">After access is revoked or expires, Relay
+				Mail can no longer use that authorisation to access the relevant Google services.</p>
+			<p id="419ece28-b75d-8085-955d-fbcd4d3e6bd0" class="" dir="auto">You can also manage connected applications
+				through your <a href="https://myaccount.google.com/permissions">Google Account security settings</a>.
+			</p>
+			<h3 id="419ece28-b75d-80a7-a768-f551335034a8" class="" dir="auto">5.3 Google API Limited Use</h3>
+			<p id="419ece28-b75d-80a3-a650-c8c50b81d2fc" class="" dir="auto">Our use and transfer of information
+				received from Google APIs adheres to the <strong>Google API Services User Data Policy, including its
+					Limited Use requirements</strong>, and applicable Google Workspace developer policies.</p>
+			<p id="419ece28-b75d-802e-a9cd-e36dd8e05442" class="" dir="auto">We do not permit the use of Google user
+				data for unrelated commercial purposes.</p>
+			<h2 id="419ece28-b75d-80cd-aac7-f502fbef948b" class="" dir="auto">6. How We Use Your Information</h2>
+			<p id="419ece28-b75d-808e-802d-f284f9139648" class="" dir="auto">We use collected information only where
+				necessary to:</p>
+			<ol type="1" id="419ece28-b75d-801b-8983-e961292cdba9" class="numbered-list" start="1" dir="auto">
+				<li>Create and maintain Relay accounts.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80d2-93e9-cbef756aed91" class="numbered-list" start="2" dir="auto">
+				<li>Authenticate users through Google.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80e4-a531-d4efb2c4dfbd" class="numbered-list" start="3" dir="auto">
+				<li>Display account profile information.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-8014-8487-dc4132dad186" class="numbered-list" start="4" dir="auto">
+				<li>Maintain authorised Google connections.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-8094-a424-d16e141f3ca8" class="numbered-list" start="5" dir="auto">
+				<li>Refresh authentication credentials.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80c3-8e28-e9332defb567" class="numbered-list" start="6" dir="auto">
+				<li>Manage active and expired sessions.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80ac-b64d-e9c9080082d3" class="numbered-list" start="7" dir="auto">
+				<li>Protect accounts against unauthorised access.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80c6-bee8-da6895a722b0" class="numbered-list" start="8" dir="auto">
+				<li>Provide requested product functionality.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-805a-9ea3-d2e5aa2e0b15" class="numbered-list" start="9" dir="auto">
+				<li>Maintain service reliability and security.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-8095-84f1-e826a95c2db5" class="numbered-list numbered-list-digits-2"
+				start="10" dir="auto">
+				<li>Respond to support requests.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-809f-9187-f018fb0ddf01" class="numbered-list numbered-list-digits-2"
+				start="11" dir="auto">
+				<li>Meet applicable legal obligations.</li>
+			</ol>
+			<p id="419ece28-b75d-808e-9dbe-dbb0fec5a8ad" class="" dir="auto">We do not use personal information for
+				unrelated advertising or behavioural profiling.</p>
+			<h2 id="419ece28-b75d-8021-8a4f-ce2f36b67cc6" class="" dir="auto">7. Advertising and External AI Processing
+			</h2>
+			<p id="419ece28-b75d-80ea-8929-fd0aad3c6e97" class="" dir="auto">Privacy is a fundamental part of
+				RelayHQ&#x27;s product design.</p>
+			<p id="419ece28-b75d-80d8-be4b-e61da48ffe88" class="" dir="auto"><strong>Our commitments:</strong></p>
+			<ul id="419ece28-b75d-8007-8d6c-fcbf7b741d29" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>No data selling:</strong> We do not sell, rent, or commercially
+					trade personal information.</li>
+			</ul>
+			<ul id="419ece28-b75d-808e-a590-e9117cba32e6" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>No behavioural advertising:</strong> We do not use connected
+					email information to create advertising profiles or deliver targeted advertisements.</li>
+			</ul>
+			<ul id="419ece28-b75d-80af-ad07-f0c3a8813863" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>No external AI processing:</strong> We do not send email
+					contents, attachments, or Google account data to external AI providers.</li>
+			</ul>
+			<ul id="419ece28-b75d-8099-9d65-f4c25d610355" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>No general-purpose AI training:</strong> We do not use your
+					email contents or Google user data to train general-purpose AI models.</li>
+			</ul>
+			<ul id="419ece28-b75d-8084-9cdb-dc7e8cae5fbe" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc"><strong>No cross-site tracking:</strong> We do not use advertising
+					trackers or behavioural tracking pixels to follow visitors across unrelated websites.</li>
+			</ul>
+			<p id="419ece28-b75d-808a-81b6-e337b27e8f92" class="" dir="auto">Strictly necessary technical mechanisms may
+				be used to maintain authentication, security, and website functionality.</p>
+			<h2 id="419ece28-b75d-8046-9abb-c3a5e83c84f3" class="" dir="auto">8. Third-Party Service Providers and Data
+				Sharing</h2>
+			<p id="419ece28-b75d-80cf-a631-d8977ff6d05e" class="" dir="auto">We do not sell personal information or
+				share it for unrelated advertising purposes.</p>
+			<p id="419ece28-b75d-8036-8532-e2e85405edf2" class="" dir="auto">To operate RelayHQ, we may use third-party
+				infrastructure and service providers, including:</p>
+			<ul id="419ece28-b75d-8060-a3e4-d57c25176178" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Cloud hosting and infrastructure providers.</li>
+			</ul>
+			<ul id="419ece28-b75d-807a-a3d9-e8de45a6401e" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Database and storage providers.</li>
+			</ul>
+			<ul id="419ece28-b75d-8025-879c-ec812f6f0ba2" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Authentication infrastructure.</li>
+			</ul>
+			<ul id="419ece28-b75d-8058-b6e0-d76f3be2b1f2" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Security and operational providers.</li>
+			</ul>
+			<ul id="419ece28-b75d-801a-adc5-ca68ae29a8df" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Payment and subscription providers.</li>
+			</ul>
+			<p id="419ece28-b75d-8039-9b66-ca4d77b194af" class="" dir="auto">These providers may process limited
+				information necessary to perform their services.</p>
+			<p id="419ece28-b75d-808d-a485-c8865a6ba338" class="" dir="auto">They are not authorised to use information
+				entrusted to them for unrelated independent commercial purposes.</p>
+			<p id="419ece28-b75d-80a4-a973-d5738a9307f0" class="" dir="auto">Where Google user data is involved, any
+				permitted transfer must comply with Google&#x27;s applicable policies and Limited Use requirements.</p>
+			<p id="419ece28-b75d-803f-a154-f9c45aa94a1c" class="" dir="auto">We may also disclose information when
+				required by law, valid legal requests, or necessary security investigations.</p>
+			<h2 id="419ece28-b75d-8057-b3dd-d7a31d80ca27" class="" dir="auto">9. Data Retention and Deletion</h2>
+			<p id="419ece28-b75d-80c5-88a8-e73fcb6a9c37" class="" dir="auto">We retain personal information only for as
+				long as necessary to provide our Services, maintain security, or satisfy legal obligations.</p>
+			<p id="419ece28-b75d-806d-a503-e9a3b7268db4" class="" dir="auto">For Relay Mail:</p>
+			<table id="419ece28-b75d-8016-bb4e-db9d122bd96b" class="simple-table" dir="ltr">
+				<thead class="simple-table-header">
+					<tr id="419ece28-b75d-80b3-88a6-f3030f611025" dir="ltr">
+						<th id="E[N}" class="simple-table-header-color simple-table-header">Information</th>
+						<th id="ikT&gt;" class="simple-table-header-color simple-table-header">Retention</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="419ece28-b75d-80f2-9dc9-dcc377ff4d2f" dir="ltr">
+						<td id="E[N}" class="">Google profile information</td>
+						<td id="ikT&gt;" class="">While the associated account remains active</td>
+					</tr>
+					<tr id="419ece28-b75d-80e2-9a8f-fe2e9f3d1389" dir="ltr">
+						<td id="E[N}" class="">OAuth credentials</td>
+						<td id="ikT&gt;" class="">While the authorised connection remains active and necessary</td>
+					</tr>
+					<tr id="419ece28-b75d-8017-ab09-e0ad7b97a13f" dir="ltr">
+						<td id="E[N}" class="">Session information</td>
+						<td id="ikT&gt;" class="">For authentication and security purposes</td>
+					</tr>
+					<tr id="419ece28-b75d-80c0-b4d5-f9988bbd4779" dir="ltr">
+						<td id="E[N}" class="">Expired sessions</td>
+						<td id="ikT&gt;" class="">Removed through cleanup processes</td>
+					</tr>
+					<tr id="419ece28-b75d-8077-afe9-d4d65428dbf3" dir="ltr">
+						<td id="E[N}" class="">Disconnected credentials</td>
+						<td id="ikT&gt;" class="">Cleared or deleted as applicable</td>
+					</tr>
+					<tr id="419ece28-b75d-80fe-a492-fb1c44ee0994" dir="ltr">
+						<td id="E[N}" class="">Email contents</td>
+						<td id="ikT&gt;" class="">Not persistently stored on RelayHQ servers</td>
+					</tr>
+				</tbody>
+			</table>
+			<p id="419ece28-b75d-80c0-9604-d45c7d69eb4e" class="" dir="auto">When an account is deleted, associated
+				personal information and credentials are removed subject to applicable legal retention requirements.</p>
+			<p id="419ece28-b75d-80b7-853d-ed8593175ebb" class="" dir="auto">Where deletion from backups or
+				infrastructure requires additional processing time, the information will be protected and not used for
+				ordinary service operations during that period.</p>
+			<h2 id="419ece28-b75d-8026-8ac8-e50f424e482c" class="" dir="auto">10. Account Deletion and Your Data</h2>
+			<p id="419ece28-b75d-802e-b347-d7cf878eb6a6" class="" dir="auto">You may request deletion of your RelayHQ
+				account and associated personal information.</p>
+			<h3 id="419ece28-b75d-8091-901f-cdaae13ba445" class="" dir="auto">10.1 In-App Deletion</h3>
+			<p id="419ece28-b75d-803d-93a0-e00d63359d21" class="" dir="auto">Where available, you can initiate account
+				deletion through the application&#x27;s account or settings interface.</p>
+			<p id="419ece28-b75d-80f0-bd55-febb64958d9c" class="" dir="auto">After successful verification, the deletion
+				process includes:</p>
+			<ol type="1" id="419ece28-b75d-8067-aee5-e78751d27768" class="numbered-list" start="1" dir="auto">
+				<li>Invalidating associated active sessions.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-8069-a52b-e0995ceedb29" class="numbered-list" start="2" dir="auto">
+				<li>Disconnecting authorised external account connections.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80f3-a1af-d156e0800531" class="numbered-list" start="3" dir="auto">
+				<li>Removing stored OAuth credentials.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80f5-87f1-fedea42d6451" class="numbered-list" start="4" dir="auto">
+				<li>Deleting associated profile information.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-8089-a011-f5c9970f09c4" class="numbered-list" start="5" dir="auto">
+				<li>Removing account records that are no longer necessary.</li>
+			</ol>
+			<ol type="1" id="419ece28-b75d-80df-a77c-e0397e6314d8" class="numbered-list" start="6" dir="auto">
+				<li>Completing applicable deletion procedures.</li>
+			</ol>
+			<h3 id="419ece28-b75d-80f7-b733-ed336ab965fb" class="" dir="auto">10.2 Email-Based Deletion</h3>
+			<p id="419ece28-b75d-8020-98e7-c08bcf199c07" class="" dir="auto">You may also request account deletion by
+				contacting:</p>
+			<p id="419ece28-b75d-8084-8bd3-dd5156dfdea2" class="" dir="auto"><strong><a
+						href="mailto:sohamglxi@gmail.com">sohamglxi@gmail.com</a></strong></p>
+			<p id="419ece28-b75d-8017-9dd5-fba9232d93e9" class="" dir="auto">We may request reasonable verification to
+				confirm that the request comes from the account owner.</p>
+			<h3 id="419ece28-b75d-800a-934d-d6e200de914c" class="" dir="auto">10.3 What Account Deletion Does Not Remove
+			</h3>
+			<p id="419ece28-b75d-8087-bcbc-edbb5f25de8b" class="" dir="auto">Deleting your RelayHQ account does not
+				automatically delete:</p>
+			<ul id="419ece28-b75d-80d7-97ce-eaff0783cadf" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Your Google account.</li>
+			</ul>
+			<ul id="419ece28-b75d-80d3-8a7d-f28e77f45a1c" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Your Gmail mailbox.</li>
+			</ul>
+			<ul id="419ece28-b75d-80dc-bae6-c1ddba957151" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Emails stored by Google.</li>
+			</ul>
+			<ul id="419ece28-b75d-808d-b1b8-c88b954240d1" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Information independently retained by your email provider.</li>
+			</ul>
+			<ul id="419ece28-b75d-809b-a624-da243264233a" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Information RelayHQ is legally required to retain.</li>
+			</ul>
+			<p id="419ece28-b75d-80f5-8923-f4df4ff64885" class="" dir="auto">You may separately revoke Relay Mail&#x27;s
+				access through your <a href="https://myaccount.google.com/permissions">Google Account settings</a>.</p>
+			<h2 id="419ece28-b75d-8004-9c94-e8c4f6f5ccfb" class="" dir="auto">11. Data Security</h2>
+			<p id="419ece28-b75d-80ea-abe4-fa46396a9158" class="" dir="auto">We use reasonable technical and
+				organisational safeguards to protect personal information.</p>
+			<p id="419ece28-b75d-80b7-bee6-e957bd8f2b33" class="" dir="auto">These measures include:</p>
+			<ul id="419ece28-b75d-80ad-9dfb-ce0b2d564408" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Encryption of stored OAuth credentials.</li>
+			</ul>
+			<ul id="419ece28-b75d-8023-95fb-fc9ce90ff4e3" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Secure authentication mechanisms.</li>
+			</ul>
+			<ul id="419ece28-b75d-804c-8ad2-d3e40f8be302" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Restricted access to sensitive infrastructure.</li>
+			</ul>
+			<ul id="419ece28-b75d-8048-a4ee-fdcd8985dc2a" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Session expiration and invalidation.</li>
+			</ul>
+			<ul id="419ece28-b75d-80d7-b1f6-fc23e354cc72" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Expired-session cleanup.</li>
+			</ul>
+			<ul id="419ece28-b75d-8019-82ed-d79e8c8a108f" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Secure handling of authentication credentials.</li>
+			</ul>
+			<ul id="419ece28-b75d-8004-8db9-ec8e3ebbdd51" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Infrastructure and application security controls.</li>
+			</ul>
+			<ul id="419ece28-b75d-8024-9fce-d43853fcf7a8" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Protection against unauthorised access.</li>
+			</ul>
+			<p id="419ece28-b75d-80b5-bf6b-dc426ca0cceb" class="" dir="auto">We do not claim that any internet-based
+				service can guarantee absolute security.</p>
+			<p id="419ece28-b75d-80c2-b40d-c14c475fed47" class="" dir="auto">If a qualifying personal-data breach
+				occurs, we will investigate, contain, and address the incident and provide notifications where required
+				by applicable law.</p>
+			<h2 id="419ece28-b75d-808a-8931-c68825e241db" class="" dir="auto">12. Cookies and Tracking Technologies</h2>
+			<p id="419ece28-b75d-8088-8af3-c0369d03ba48" class="" dir="auto">RelayHQ does not use advertising cookies,
+				behavioural tracking cookies, or third-party analytics trackers to build visitor profiles.</p>
+			<p id="419ece28-b75d-801e-937f-da85d7f32c0b" class="" dir="auto">Strictly necessary cookies or similar
+				technologies may be used for:</p>
+			<ul id="419ece28-b75d-807b-a143-e4860bce75bb" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Authentication.</li>
+			</ul>
+			<ul id="419ece28-b75d-803f-9181-e7b26c9a4d40" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Session management.</li>
+			</ul>
+			<ul id="419ece28-b75d-80f8-b73c-c02c857e8600" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Website functionality.</li>
+			</ul>
+			<ul id="419ece28-b75d-80e5-811d-e77d1f55faf7" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Security purposes.</li>
+			</ul>
+			<p id="419ece28-b75d-8092-969b-f5b8874bd781" class="" dir="auto">These technologies are not used to build
+				advertising profiles or track users across unrelated websites.</p>
+			<h2 id="419ece28-b75d-80a2-8558-d57e80a895ff" class="" dir="auto">13. International Data Processing</h2>
+			<p id="419ece28-b75d-80d5-8c97-c3e8dd1861cb" class="" dir="auto">RelayHQ may use infrastructure and service
+				providers located outside your country.</p>
+			<p id="419ece28-b75d-80f5-bedc-df21ee7b0a52" class="" dir="auto">Where personal information is processed
+				internationally, we will apply safeguards required by applicable data-protection laws.</p>
+			<h2 id="419ece28-b75d-80c9-8797-c044ca9723d5" class="" dir="auto">14. Children&#x27;s Privacy</h2>
+			<p id="419ece28-b75d-80e6-84b6-f814b3b08271" class="" dir="auto">Our Services are not intended for
+				individuals below the minimum age permitted under applicable law.</p>
+			<p id="419ece28-b75d-8096-9094-e1832b9f5b79" class="" dir="auto">We do not knowingly process children&#x27;s
+				personal information in violation of applicable legal requirements.</p>
+			<p id="419ece28-b75d-8060-8a5d-dda7a77f60b2" class="" dir="auto">Where parental or guardian consent is
+				legally required, we will follow the relevant requirements.</p>
+			<h2 id="419ece28-b75d-806b-9201-ecf2ad0e231c" class="" dir="auto">15. Your Privacy Rights</h2>
+			<p id="419ece28-b75d-8068-bd07-f5083f6b547c" class="" dir="auto">Depending on your location and applicable
+				law, you may have the right to:</p>
+			<ul id="419ece28-b75d-807d-9488-d48638bb5340" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Request access to your personal information.</li>
+			</ul>
+			<ul id="419ece28-b75d-807a-a406-cded38656280" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Request correction of inaccurate information.</li>
+			</ul>
+			<ul id="419ece28-b75d-80ba-a21c-e7ebc4c2aff5" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Request deletion of personal information.</li>
+			</ul>
+			<ul id="419ece28-b75d-8009-9962-dfd65cd256f3" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Withdraw consent where processing relies on consent.</li>
+			</ul>
+			<ul id="419ece28-b75d-803c-b43a-e98ff7926f04" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Obtain information about how your data is processed.</li>
+			</ul>
+			<ul id="419ece28-b75d-80e0-9827-c94e3c6b6a27" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Raise privacy complaints.</li>
+			</ul>
+			<ul id="419ece28-b75d-8044-9896-f7a5c7339502" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Nominate an authorised representative where recognised by law.</li>
+			</ul>
+			<p id="419ece28-b75d-80df-b7e5-ce1a06c2961f" class="" dir="auto">You can exercise these rights through the
+				application or by contacting our Privacy Team.</p>
+			<p id="419ece28-b75d-80c3-aab6-c59523fba04e" class="" dir="auto">We will handle requests within applicable
+				legal timeframes.</p>
+			<h2 id="419ece28-b75d-80a4-a896-edc98229b691" class="" dir="auto">16. Legal Compliance</h2>
+			<p id="419ece28-b75d-80fd-b4c6-ffc08dd94ede" class="" dir="auto">RelayHQ seeks to comply with applicable
+				privacy and data-protection requirements, including:</p>
+			<ul id="419ece28-b75d-8015-ba68-ff0ebbc5cfe9" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">The Digital Personal Data Protection Act, 2023 (India), and applicable
+					rules and commencement notifications.</li>
+			</ul>
+			<ul id="419ece28-b75d-80d1-a2a0-cc58fa35ce73" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Applicable information technology and cybersecurity requirements.</li>
+			</ul>
+			<ul id="419ece28-b75d-8056-962a-f69d0062e8bb" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Relevant consumer-protection legislation.</li>
+			</ul>
+			<ul id="419ece28-b75d-809f-a328-f7e79dee0c5f" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Applicable international data-protection requirements.</li>
+			</ul>
+			<ul id="419ece28-b75d-806e-a0b5-febf5a986b49" class="bulleted-list" dir="auto">
+				<li style="list-style-type:disc">Google API Services User Data Policy and Google Workspace developer
+					policies.</li>
+			</ul>
+			<p id="419ece28-b75d-8020-a904-f59cdfbd83f2" class="" dir="auto">The specific legal rights and obligations
+				applicable to you depend on your jurisdiction and the relevant legislation in force.</p>
+			<h2 id="419ece28-b75d-8062-8e30-d459049325df" class="" dir="auto">17. Changes to This Privacy Policy</h2>
+			<p id="419ece28-b75d-80c4-959f-f3fa99de8350" class="" dir="auto">We may update this Privacy Policy as our
+				products, services, infrastructure, and legal obligations evolve.</p>
+			<p id="419ece28-b75d-804f-bce3-de9db517ab35" class="" dir="auto">The latest version will be published
+				through our official website with an updated <strong>Last Updated</strong> date.</p>
+			<p id="419ece28-b75d-803e-bc6e-ff24ccf61b2c" class="" dir="auto">Material changes may also be communicated
+				through email or in-app notifications.</p>
+			<p id="419ece28-b75d-800a-8ac8-c053ef7547db" class="" dir="auto">Where required by law, we will obtain
+				additional consent before applying changes.</p>
+			<h2 id="419ece28-b75d-806e-a895-c3764ba9be86" class="" dir="auto">18. Contact Information</h2>
+			<p id="419ece28-b75d-80dc-8093-d04ec0d79afa" class="" dir="auto">For privacy questions, personal-data
+				requests, account deletion, or complaints, contact:</p>
+			<p id="419ece28-b75d-8033-92eb-d4dbfd83e15b" class="" dir="auto"><strong>RelayHQ Privacy Team</strong></p>
+			<table id="419ece28-b75d-801e-84d5-fc6db31134db" class="simple-table" dir="ltr">
+				<thead class="simple-table-header">
+					<tr id="419ece28-b75d-80fc-b585-d06dbbf1a15f" dir="ltr">
+						<th id="QXH~" class="simple-table-header-color simple-table-header">Detail</th>
+						<th id="fin]" class="simple-table-header-color simple-table-header">Information</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="419ece28-b75d-804c-bf71-f81a335e741b" dir="ltr">
+						<td id="QXH~" class="">Organisation</td>
+						<td id="fin]" class="">RelayHQ</td>
+					</tr>
+					<tr id="419ece28-b75d-801e-8048-f7d212aff431" dir="ltr">
+						<td id="QXH~" class="">Email</td>
+						<td id="fin]" class=""><a href="mailto:sohamglxi@gmail.com">sohamglxi@gmail.com</a></td>
+					</tr>
+					<tr id="419ece28-b75d-8018-a01f-d38217cf546d" dir="ltr">
+						<td id="QXH~" class="">Registered Address</td>
+						<td id="fin]" class="">Kolkata, West Bengal, India</td>
+					</tr>
+					<tr id="419ece28-b75d-805b-9092-c61c57d3df54" dir="ltr">
+						<td id="QXH~" class="">Website</td>
+						<td id="fin]" class=""><a href="https://app.relaymail.online/">https://app.relaymail.online</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p id="419ece28-b75d-8053-991a-f010c3e1ec7b" class="" dir="auto">For security-related concerns, you may also
+				contact us through the same email address.</p>
+			<hr id="419ece28-b75d-8059-a71b-d55e434aff3c" dir="auto" />
+			<h2 id="419ece28-b75d-8046-a4c2-e2820ba13038" class="" dir="auto">Google API Services – Limited Use
+				Disclosure</h2>
+			<p id="419ece28-b75d-8017-b087-e2922deadb61" class="" dir="auto">RelayHQ&#x27;s use and transfer of
+				information received from Google APIs will adhere to the <strong>Google API Services User Data Policy,
+					including its Limited Use requirements</strong>.</p>
+			<p id="419ece28-b75d-8061-99ad-e7177336f915" class="" dir="auto">We access Google account information and
+				authorised Google API data solely to provide the functionality requested by users.</p>
+			<p id="419ece28-b75d-80bd-a542-c3c469547990" class="" dir="auto">We do not sell Google user data, use it for
+				advertising, or use it to train general-purpose AI or machine-learning models.</p>
+			<hr id="419ece28-b75d-80e1-b8b5-f31386ad93f6" dir="auto" />
+			<p id="419ece28-b75d-80f3-91f8-fc5d1909242a" class="" dir="auto"><em>Your inbox belongs to you. Your data
+					should stay under your control.</em></p>
+			<p id="419ece28-b75d-80e4-9bed-f382977ed7ab" class="" dir="auto"><strong>© 2026 RelayHQ. All rights
+					reserved.</strong></p>
+		</div>
+	</article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body>
+
+</html>
